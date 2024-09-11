@@ -1,0 +1,574 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Img from '~/components/common/Img.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+// const token = import.meta.env.VITE_API_TOKEN;
+// const base = import.meta.env.VITE_BACKEND_PATH;
+
+// // Project
+// const projectUrl = base + 'api/v1/projects/my-project';
+// const response = await fetch(projectUrl, {
+//   method: 'GET',
+//   headers: {
+//     Authorization: 'Bearer ' + token,
+//     'Content-Type': 'application/json',
+//   },
+// });
+// const data = await response.json();
+// const projectData = data.project;
+
+// // Rooms
+// const roomUrl = base + 'api/v1/rooms';
+// const roomResponse = await fetch(roomUrl, {
+//   method: 'GET',
+//   headers: {
+//     Authorization: 'Bearer ' + token,
+//     'Content-Type': 'application/json',
+//   },
+// });
+// const roomData = await roomResponse.json();
+// const rooms = roomData.list;
+
+// // Facility
+// const facilityUrl = base + 'api/v1/facilities';
+// const facilityResponse = await fetch(facilityUrl, {
+//   method: 'GET',
+//   headers: {
+//     Authorization: 'Bearer ' + token,
+//     'Content-Type': 'application/json',
+//   },
+// });
+// const facilityData = await facilityResponse.json();
+// const facilities = facilityData.list;
+
+// // Service
+// const serviceUrl = base + 'api/v1/services';
+// const serviceResponse = await fetch(serviceUrl, {
+//   method: 'GET',
+//   headers: {
+//     Authorization: 'Bearer ' + token,
+//     'Content-Type': 'application/json',
+//   },
+// });
+// const serviceData = await serviceResponse.json();
+// const services = serviceData.list;
+
+const metadata = {
+  title: 'HGU',
+  ignoreTitleTemplate: true,
+};
+
+const bannerImg = '~/assets/images/img4.jpg';
+// const toddlerImg = '~/assets/images/img6.jpg';
+// const preSchool1Img = '~/assets/images/img6.jpg';
+// const preSchool2Img = '~/assets/images/img6.jpg';
+// const prenatalImg = '~/assets/images/img6.jpg';
+// const onlineImg = '~/assets/images/img6.jpg';
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <div class="w-full banner-area h-auto">
+    <!-- <img src={bannerImg} class="w-full h-auto" alt="" /> -->
+    <Img src={bannerImg} alt="App Store Image" class:list={'w-full rounded-lg border-red-300 border-2'} />
+    <!-- <div class="bg-black absolute w-full hidden md:block" style="z-index: 2; opacity:0.5"></div> -->
+    <div class="top-24 absolute w-full hidden md:block" style="z-index: 3;">
+      <div class="w-full mx-auto">
+        <!-- <span class="text-white text-sm block text-center bg-opacity-0 mt-20 mb-5">WELCOME TO</span> -->
+        <span
+          style="text-shadow: 2px 2px black;"
+          class="text-white font-bold text-5xl block text-center bg-opacity-30 mt-40 drop-shadow-xl border border-gray-50 py-10 bg-gray-400"
+          >Drawing Out the "Genius" in Your Child</span
+        >
+        <!-- <span class="text-white text-5xl block text-center bg-opacity-0 mt-5"
+            >Drawing Out the "Genius" in Your Child</span
+            > -->
+
+        <a
+          href="#"
+          target="_blank"
+          class="block w-1/12 text-center px-3 py-2.5 rounded bg-primary-500 text-white drop-shadow-lg font-bold text-sm mt-10 mx-auto cursor-pointer hover:bg-primary-600"
+          ><span style="text-shadow: 2px 2px rgb(4, 102, 17);">Enroll Now</span></a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full my-10" id="popular">
+    <div class="lg:w-9/12 mx-auto mb-10">
+      <h3 class="text-center font-bold text-3xl text-primary-500 mb-3">Our Programs</h3>
+      <p class="text-center text-gray-400 text-sm">
+        Heguru Classes for Children provide courses for training the Right Brain, which are divided into various
+        programs by age group; Prenatal Education (for pregnant women), Infant & Toddler Classes, Preschool Classes, and
+        Primary Classes. We also provide special courses catered for children planning to take Primary or Secondary
+        School entrance examinations.
+      </p>
+    </div>
+    <div class="lg:w-2/3 md:w-full mx-auto grid lg:grid-cols-3 md:grid-cols-3 gap-2 gap-y-10 place-items-center">
+      <div class="max-w-sm px-3">
+        <div
+          class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
+          style="height: 450px;"
+        >
+          <a href="#">
+            <img class="rounded-t-lg img-hover" style="transition: transform 0.8s ease;" src="/img6.jpg" alt="" />
+            <!-- <Img src={bannerImg} alt="App Store Image" class:list={'w-full rounded-lg border-red-300 border-2'} /> -->
+          </a>
+          <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
+            <a href="#">
+              <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Infant & Toddler Class</h5>
+            </a>
+            <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
+              >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+              strengthening the bond between parent and child, give your child a head start in building a larger
+              “vessel” for the brain.</span
+            >
+            <a
+              href="#"
+              class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
+              >Read More...</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="max-w-sm px-3">
+        <div
+          class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
+          style="height: 450px;"
+        >
+          <a href="#">
+            <img class="rounded-t-lg img-hover" style="transition: transform 0.8s ease;" src="/img13.jpg" alt="" />
+          </a>
+          <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
+            <a href="#">
+              <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Preschool I Class</h5>
+            </a>
+            <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
+              >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+              strengthening the bond between parent and child, give your child a head start in building a larger
+              “vessel” for the brain.</span
+            >
+            <a
+              href="#"
+              class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
+              >Read More...</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="max-w-sm px-3">
+        <div
+          class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
+          style="height: 450px;"
+        >
+          <a href="#">
+            <img class="rounded-t-lg img-hover" style="transition: transform 0.8s ease;" src="/img15.jpg" alt="" />
+          </a>
+          <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
+            <a href="#">
+              <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Preschool II Class</h5>
+            </a>
+            <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
+              >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+              strengthening the bond between parent and child, give your child a head start in building a larger
+              “vessel” for the brain.</span
+            >
+            <a
+              href="#"
+              class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
+              >Read More...</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2 md:w-full mx-auto grid lg:grid-cols-2 md:grid-cols-2 gap-2 gap-y-10 place-items-center">
+      <div class="max-w-sm px-3">
+        <div
+          class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
+          style="height: 450px;"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg img-hover object-cover"
+              style="transition: transform 0.8s ease;"
+              src="/img14.jpg"
+              alt=""
+            />
+          </a>
+          <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
+            <a href="#">
+              <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Prenatal Class</h5>
+            </a>
+            <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
+              >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+              strengthening the bond between parent and child, give your child a head start in building a larger
+              “vessel” for the brain.</span
+            >
+            <a
+              href="#"
+              class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
+              >Read More...</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="max-w-sm px-3">
+        <div
+          class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
+          style="height: 450px;"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg img-hover object-cover"
+              style="transition: transform 0.8s ease;"
+              src="/img11.jpg"
+              alt=""
+            />
+          </a>
+          <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
+            <a href="#">
+              <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Online Classes</h5>
+            </a>
+            <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
+              >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+              strengthening the bond between parent and child, give your child a head start in building a larger
+              “vessel” for the brain.</span
+            >
+            <a
+              href="#"
+              class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
+              >Read More...</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+    <div class="w-full my-20">
+        <div class="mx-auto w-9/12 mb-6">
+        <h3 class="text-center font-bold text-2xl text-gray-600 mb-3">Hotel Accomodation</h3>
+        <p class="text-center text-gray-400 mb-20 text-sm">
+            We all live in an age that belongs to the young at heart. Life that is becoming extremely fast
+        </p>
+        </div>
+    </div> -->
+
+  <!-- Features2 Widget ************** -->
+
+  <div class="w-full bg-gray-800 my-5 py-10">
+    <Features2
+      title="Our Products"
+      subtitle="See the difference! The features of Heguru’s Classes for Children"
+      tagline=""
+      items={[
+        {
+          title: 'Flashcards',
+          description:
+            'Studied at their own pace from childhood. When they found what they wanted to do, their grades soared through the roof!!',
+          icon: 'flat-color-icons:template',
+        },
+        {
+          title: 'Charts',
+          description:
+            'Pursued their own interests, without hardly any cramming school classes, and gained entry into the most competitive university and department in Japan!!',
+          icon: 'flat-color-icons:currency-exchange',
+        },
+        {
+          title: 'Books',
+          description:
+            'Pursued theatre directing, choir, and jazz guitar at university, going on to fulfill a multitude of potentials and talents!!',
+          icon: 'flat-color-icons:document',
+        },
+      ]}
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      </Fragment>
+    </Features2>
+  </div>
+
+  <!-- Content Widget **************** -->
+
+  <div class="lg:w-9/12 mx-auto">
+    <Content
+      isReversed
+      tagline=""
+      title=""
+      items={[]}
+      image={{
+        src: '/img10.jpg',
+        alt: 'Colorful Image',
+      }}
+    >
+      <Fragment slot="content">
+        <h3 class="ml-10 text-xl font-bold tracking-tight dark:text-white sm:text-2xl">About Us</h3>
+        <h3 class="ml-10 text-xl font-bold tracking-tight dark:text-white sm:text-2xl">Our History</h3>
+        <h3 class="ml-10 text-xl font-bold tracking-tight dark:text-white sm:text-2xl">Mission & Vision</h3>
+        <p class="ml-10 mt-10 md:text-sm text-gray-500">
+          Heguru is an educational network of classes for young children, based in Tachikawa, Tokyo, and committed to
+          providing the ideal education for children and their parents. Heguru classes start from the prenatal stage,
+          when the baby is still in the mother’s womb.
+        </p>
+        <a href="#"
+          ><span class="ml-10 inline-block mt-10 px-5 py-2 bg-primary-500 rounded text-white text-sm font-semibold"
+            >Contact Us</span
+          ></a
+        >
+      </Fragment>
+    </Content>
+  </div>
+
+  <div class="slider lg:w-9/12 mx-auto pb-20">
+    <div class="lg:w-9/12 mx-auto mb-10">
+      <h3 class="text-center font-bold text-3xl text-primary-500 mb-3">Bright the future of kids with us</h3>
+      <p class="text-center text-gray-400 text-sm">Train with expert instructors from Heguru.</p>
+    </div>
+    <div class="slides">
+      <img src="/img1.jpg" class="slide" alt="Image 1" />
+      <img src="/img2.jpg" class="slide" alt="Image 2" />
+      <img src="/img3.jpg" class="slide" alt="Image 3" />
+      <img src="/img4.jpg" class="slide" alt="Image 4" />
+      <img src="/img8.jpg" class="slide" alt="Image 5" />
+      <img src="/img6.jpg" class="slide" alt="Image 6" />
+    </div>
+    <!-- Navigation buttons -->
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+
+  <div class="w-full bg-blue-50 py-20">
+    <div class="lg:w-9/12 mx-auto mb-10">
+      <h3 class="text-center font-bold text-3xl text-primary-500 mb-3">Words from Parents</h3>
+      <p class="text-center text-gray-400 text-sm">See what parents are saying about Heguru.</p>
+    </div>
+
+    <div class="lg:w-9/12 md:w-full mx-auto grid lg:grid-cols-3 md:grid-cols-3 gap-2 gap-y-10 place-items-center">
+      <iframe
+        style="width:90%; border-radius: 5px;"
+        height="315"
+        src="https://www.youtube.com/embed/21hmP6q10wQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+      <iframe
+        style="width:90%; border-radius: 5px;"
+        height="315"
+        src="https://www.youtube.com/embed/uAVztJem0pc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+      <iframe
+        style="width:90%; border-radius: 5px;"
+        height="315"
+        src="https://www.youtube.com/embed/mQtOYzi-eEU"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+    <!-- <Testimonials
+      title="Words from Parents"
+      subtitle="See what parents are saying about Heguru."
+      testimonials={[
+        {
+          testimonial: `Youtube video links will show here. Youtube video links will show here. Youtube video links will show here`,
+          name: 'Su T. of New Zealand',
+          job: 'September 2015',
+          image: {
+            src: '/user.png',
+            alt: 'Emily Kennedy Image',
+          },
+        },
+        {
+          testimonial: `Youtube video links will show here. Youtube video links will show here. Youtube video links will show here`,
+          name: 'Sarah Hansen',
+          job: 'Photographer',
+          image: {
+            src: '/user.png',
+            alt: 'Sarah Hansen Image',
+          },
+        },
+        {
+          testimonial: `Youtube video links will show here. Youtube video links will show here. Youtube video links will show here`,
+          name: 'John C',
+          job: 'October 2015',
+          image: {
+            src: '/user.png',
+            alt: 'Mark Wilkinson Image',
+          },
+        },
+      ]}
+      callToAction={{
+        target: '_blank',
+        text: 'More testimonials...',
+        href: '/review',
+        icon: 'tabler:chevron-right',
+      }}
+    /> -->
+  </div>
+
+  <div class="w-full my-10" id="popular">
+    <Features3
+      title="Contact Us"
+      subtitle="We’re here to help and answer any question you might have."
+      columns={4}
+      items={[
+        {
+          title: 'Phone',
+          icon: 'tabler:phone',
+          callToAction: {
+            target: '_blank',
+            text: '<span class="font-bold text-sm italic">School</span><br/><span class="text-sm">+959-123-456, 457, 458, <br/>+95-9-1234569</span><br/> <span class="font-bold text-sm italic">Office</span><br/><span class="text-sm">+959-123-456, 457, 458</span>',
+            href: '#',
+            variant: 'link',
+          },
+        },
+        {
+          title: 'Email',
+          icon: 'tabler:mail',
+          callToAction: {
+            target: '_blank',
+            text: '<span class="text-sm">heguru@gmail.com contact@heguru.com</span>',
+            href: '#',
+            variant: 'link',
+          },
+        },
+        {
+          title: 'Fax',
+          icon: 'tabler:printer',
+          callToAction: {
+            target: '_blank',
+            text: '<span class="font-bold text-sm italic">School</span><br/><span class="text-sm">+959-123-456, 457, 458, <br/>+95-9-1234569</span><br/> <span class="font-bold text-sm italic">Office</span><br/><span class="text-sm">+959-123-456, 457, 458</span>',
+            href: '#',
+            variant: 'link',
+          },
+        },
+        {
+          title: 'Address',
+          icon: 'tabler:map',
+          callToAction: {
+            target: '_blank',
+            text: '<span class="text-sm font-bold italic">School</span><br/><span class="text-sm">No. 100, Main Road, Yangon, Myanmar</span><br/><span class="text-sm font-bold italic">Japan Office</span><br/><span class="text-sm">No.6, Township, City</span>',
+            href: '#',
+            variant: 'link',
+          },
+        },
+      ]}
+    />
+  </div>
+
+  <script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const slides = document.querySelector('.slides');
+      const totalSlides = document.querySelectorAll('.slide').length / 3;
+
+      if (index >= totalSlides) {
+        currentIndex = 0; // Loop back to the first slide
+      } else if (index < 0) {
+        currentIndex = totalSlides - 1; // Loop back to the last slide
+      } else {
+        currentIndex = index;
+      }
+
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(() => {
+      nextSlide();
+    }, 3000);
+  </script>
+
+  <style>
+    .banner-area {
+      /* height: 800px; */
+      position: relative;
+      overflow: hidden;
+    }
+    #popular .parent-div:hover .img-hover {
+      transform: scale(1.5) rotate(10deg);
+    }
+    .parent-div:hover .img-hover {
+      transform: scale(1.3);
+    }
+    /* .img-hover {
+                                transform .2s;
+                            } */
+    .parent-div {
+      /* width: 320px; */
+      /* height: 390px; */
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* slider */
+
+    .slider {
+      position: relative;
+      /* width: 100%; */
+      /* width: 1000px; */
+      overflow: hidden;
+      margin: auto;
+    }
+
+    /* Slides container */
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      max-height: 300px;
+    }
+
+    /* Each slide */
+    .slide {
+      min-width: 33.3%;
+      margin-right: 20px;
+      border-radius: 5px;
+    }
+
+    /* Navigation buttons */
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+  </style>
+</Layout>
