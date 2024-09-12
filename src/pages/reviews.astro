@@ -1,0 +1,90 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Reviews',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <!-- component -->
+  <div class="w-full bg-blue-50 py-20">
+    <div class="lg:w-9/12 mx-auto mb-10">
+      <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 pt-10">Student Challenges</h3>
+      <p class="text-center text-gray-400 text-sm">Student-challenge videos.</p>
+    </div>
+
+    <div class="lg:w-9/12 md:w-full mx-auto grid lg:grid-cols-3 md:grid-cols-3 gap-2 gap-y-10 place-items-center">
+      <iframe
+        style="width:90%; border-radius: 5px;"
+        height="315"
+        src="https://www.youtube.com/embed/jm2CYYBhgS4"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+      <iframe
+        style="width:90%; border-radius: 5px;"
+        height="315"
+        src="https://www.youtube.com/embed/fzfa8G9kFr4"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+      <iframe
+        style="width:90%; border-radius: 5px;"
+        height="315"
+        src="https://www.youtube.com/embed/McCuRdZVcG8"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+  </div>
+  <div class="w-full pb-20">
+    <div class="lg:w-9/12 mx-auto mb-10">
+      <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 pt-10">Words from Parents</h3>
+      <p class="text-center text-gray-400 text-sm">See what parents are saying about Heguru.</p>
+    </div>
+
+    <div class="lg:w-9/12 md:w-full mx-auto grid lg:grid-cols-3 md:grid-cols-3 gap-2 gap-y-10 place-items-center">
+      <iframe
+        style="width:90%; border-radius: 5px;"
+        height="315"
+        src="https://www.youtube.com/embed/21hmP6q10wQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+      <iframe
+        style="width:90%; border-radius: 5px;"
+        height="315"
+        src="https://www.youtube.com/embed/uAVztJem0pc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+      <iframe
+        style="width:90%; border-radius: 5px;"
+        height="315"
+        src="https://www.youtube.com/embed/mQtOYzi-eEU"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+  </div>
+</Layout>
