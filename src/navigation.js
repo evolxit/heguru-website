@@ -24,7 +24,7 @@ export const headerData = {
     },
     {
       text: 'FAQ',
-      href: getPermalink('/about'),
+      href: getPermalink('/faq'),
     },
     {
       text: 'Activity',
