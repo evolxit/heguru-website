@@ -1,0 +1,171 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Programs',
+  items: [],
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Programs" title="Our Programs" subtitle="" />
+
+  <!-- component -->
+  <div class="w-full">
+    <div class="w-full lg:w-9/12 mx-auto">
+      <div class="text-box text-sm text-gray-500 text-justify px-5">
+        Heguru Classes for Children provide courses for training the Right Brain, which are divided into various
+        programs by age group; Prenatal Education (for pregnant women), Infant & Toddler Classes, Preschool Classes, and
+        Primary Classes. We also provide special courses catered for children planning to take Primary or Secondary
+        School entrance examinations.
+      </div>
+
+      <Content
+        isReversed
+        tagline=""
+        title=""
+        items={[]}
+        image={{
+          src: '/img6.jpg',
+          alt: 'Colorful Image',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="md:ml-10 text-xl font-bold tracking-tight dark:text-white sm:text-2xl">Infant & Toddler Class</h3>
+          <p class="md:ml-10 mt-10 md:text-sm text-gray-500">
+            Heguru is the only education network whose infant classes have a 2-teacher system. We input children with a
+            wide range of information from picture cards, dance and song, and a variety of visual stimuli using lights
+            and videos, at a very high speed, which allows their Right Brains to operate at full capacity. <br />
+
+            <a
+              href="#"
+              class="text-xs hover:bg-primary-700 font-bold inline-block mt-10 bg-primary-500 text-white rounded px-3 py-2"
+              >Read More...</a
+            >
+          </p>
+        </Fragment>
+      </Content>
+
+      <Content
+        tagline=""
+        title=""
+        items={[]}
+        image={{
+          src: '/img13.jpg',
+          alt: 'Colorful Image',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="md:ml-10 text-xl font-bold tracking-tight dark:text-white sm:text-2xl">Preschool I Class</h3>
+          <p class="md:ml-10 mt-10 md:text-sm text-gray-500">
+            The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+            strengthening the bond between parent and child, give your child a head start in building a larger “vessel”
+            for the brain. <br />
+
+            <a
+              href="#"
+              class="text-xs hover:bg-primary-700 font-bold inline-block mt-10 bg-primary-500 text-white rounded px-3 py-2"
+              >Read More...</a
+            >
+          </p>
+        </Fragment>
+      </Content>
+
+      <Content
+        isReversed
+        tagline=""
+        title=""
+        items={[]}
+        image={{
+          src: '/img15.jpg',
+          alt: 'Colorful Image',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="md:ml-10 text-xl font-bold tracking-tight dark:text-white sm:text-2xl">Preschool II Class</h3>
+          <p class="md:ml-10 mt-10 md:text-sm text-gray-500">
+            The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+            strengthening the bond between parent and child, give your child a head start in building a larger “vessel”
+            for the brain.<br />
+
+            <a
+              href="#"
+              class="text-xs hover:bg-primary-700 font-bold inline-block mt-10 bg-primary-500 text-white rounded px-3 py-2"
+              >Read More...</a
+            >
+          </p>
+        </Fragment>
+      </Content>
+
+      <Content
+        tagline=""
+        title=""
+        items={[]}
+        image={{
+          src: '/img14.jpg',
+          alt: 'Colorful Image',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="md:ml-10 text-xl font-bold tracking-tight dark:text-white sm:text-2xl">Prenatal Class</h3>
+          <p class="md:ml-10 mt-10 md:text-sm text-gray-500">
+            The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+            strengthening the bond between parent and child, give your child a head start in building a larger “vessel”
+            for the brain.<br />
+
+            <a
+              href="#"
+              class="text-xs hover:bg-primary-700 font-bold inline-block mt-10 bg-primary-500 text-white rounded px-3 py-2"
+              >Read More...</a
+            >
+          </p>
+        </Fragment>
+      </Content>
+
+      <Content
+        isReversed
+        tagline=""
+        title=""
+        items={[]}
+        image={{
+          src: '/img11.jpg',
+          alt: 'Colorful Image',
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="md:ml-10 text-xl font-bold tracking-tight dark:text-white sm:text-2xl">Online Classes</h3>
+          <p class="md:ml-10 mt-10 md:text-sm text-gray-500">
+            The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+            strengthening the bond between parent and child, give your child a head start in building a larger “vessel”
+            for the brain.<br />
+
+            <a
+              href="#"
+              class="text-xs hover:bg-primary-700 font-bold inline-block mt-10 bg-primary-500 text-white rounded px-3 py-2"
+              >Read More...</a
+            >
+          </p>
+        </Fragment>
+      </Content>
+    </div>
+  </div>
+
+  <style>
+    .parent-div:hover .img-hover {
+      transform: scale(1.3);
+    }
+    /* .img-hover {
+                    transform .2s;
+                } */
+    .parent-div {
+      /* width: 320px; */
+      /* height: 390px; */
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+</Layout>

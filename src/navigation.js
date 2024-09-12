@@ -12,11 +12,11 @@ export const headerData = {
     },
     {
       text: 'Programs',
-      href: getPermalink('/about'),
+      href: getPermalink('/programs'),
     },
     {
       text: 'Testimonials',
-      href: getPermalink('/about'),
+      href: getPermalink('/reviews'),
     },
     {
       text: 'Parents',
@@ -32,7 +32,7 @@ export const headerData = {
     },
     {
       text: 'Contact',
-      href: getPermalink('/about'),
+      href: getPermalink('/contact'),
     },
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
