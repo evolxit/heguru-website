@@ -99,7 +99,7 @@ const bannerImg = '~/assets/images/img4.jpg';
     </div>
   </div>
 
-  <div class="w-full my-10" id="popular">
+  <div class="w-full my-10 px-5" id="popular">
     <div class="slider lg:w-9/12 mx-auto py-10">
       <div class="lg:w-9/12 mx-auto mb-10">
         <h3 class="text-center font-bold text-3xl text-primary-500 mb-3">Our Programs</h3>
@@ -247,6 +247,83 @@ const bannerImg = '~/assets/images/img4.jpg';
             </div>
           </div>
         </div>
+
+        <!-- to create infinite -->
+        <!-- <div class="max-w-sm px-3 slide">
+          <div
+            class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
+            style="height: 450px;"
+          >
+            <a href="#">
+              <img class="rounded-t-lg img-hover" style="transition: transform 0.8s ease;" src="/img6.jpg" alt="" />
+            </a>
+            <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
+              <a href="#">
+                <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Infant & Toddler Class</h5>
+              </a>
+              <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
+                >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+                strengthening the bond between parent and child, give your child a head start in building a larger
+                “vessel” for the brain.</span
+              >
+              <a
+                href="#"
+                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
+                >Read More...</a
+              >
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="max-w-sm px-3 slide">
+          <div
+            class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
+            style="height: 450px;"
+          >
+            <a href="#">
+              <img class="rounded-t-lg img-hover" style="transition: transform 0.8s ease;" src="/img13.jpg" alt="" />
+            </a>
+            <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
+              <a href="#">
+                <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Preschool I Class</h5>
+              </a>
+              <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
+                >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+                strengthening the bond between parent and child, give your child a head start in building a larger
+                “vessel” for the brain.</span
+              >
+              <a
+                href="#"
+                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
+                >Read More...</a
+              >
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="max-w-sm px-3 slide">
+          <div
+            class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
+            style="height: 450px;"
+          >
+            <a href="#">
+              <img class="rounded-t-lg img-hover" style="transition: transform 0.8s ease;" src="/img13.jpg" alt="" />
+            </a>
+            <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
+              <a href="#">
+                <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Preschool I Class</h5>
+              </a>
+              <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
+                >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
+                strengthening the bond between parent and child, give your child a head start in building a larger
+                “vessel” for the brain.</span
+              >
+              <a
+                href="#"
+                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
+                >Read More...</a
+              >
+            </div>
+          </div>
+        </div> -->
       </div>
       <!-- Navigation buttons -->
       <button class="prev" onclick="prevSlide()">&#10094;</button>
@@ -507,6 +584,20 @@ const bannerImg = '~/assets/images/img4.jpg';
   </script>
 
   <style>
+    /* @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      33.4% {
+        transform: translateX(-33.4%);
+      }
+      67% {
+        transform: translateX(-67%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    } */
     .banner-area {
       /* height: 800px; */
       position: relative;
@@ -542,6 +633,17 @@ const bannerImg = '~/assets/images/img4.jpg';
     .slides {
       display: flex;
       transition: transform 0.5s ease-in-out;
+      /* transition-timing-function: linear; */
+      /* animation: slide 4s infinite ease-in-out; */
+
+      /* animation-name: slide;
+      animation-duration: 13s;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; */
+
+      /* animation-fill-mode: reverse; */
+      /* animation-direction: alternate; */
       /* max-height: 300px; */
     }
 
