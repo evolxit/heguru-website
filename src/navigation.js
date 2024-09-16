@@ -48,18 +48,37 @@ export const footerData = {
         { text: 'Contact', href: getPermalink('/contact') },
       ],
     },
+    {
+      title: '',
+      links: [
+        { text: 'Programs', href: getPermalink('/programs') },
+        { text: 'Activity', href: getPermalink('/activity') },
+      ],
+    },
+    {
+      title: '',
+      links: [
+        { text: 'Parents', href: getPermalink('/') },
+        { text: 'FAQ', href: getPermalink('/faq') },
+        { text: 'Testimonials', href: getPermalink('/reviews') },
+      ],
+    },
   ],
   secondaryLinks: [
-    { text: 'Gallery', href: getPermalink('/about') },
-    { text: 'Reviews', href: getPermalink('/about') },
+    { text: 'Activity', href: getPermalink('/activity') },
+    { text: 'Testimonials', href: getPermalink('/reviews') },
   ],
   socialLinks: [
-    // {
-    //   ariaLabel: 'Facebook',
-    //   icon: 'tabler:brand-facebook',
-    //   href: 'https://www.facebook.com/Pine-Hill-Resort-739814942807242',
-    // },
+    {
+      ariaLabel: 'Facebook',
+      icon: 'tabler:brand-facebook',
+      href: 'https://www.facebook.com/Heguruyangoncentre?mibextid=LQQJ4d',
+    },
+    {
+      ariaLabel: 'Instagram',
+      icon: 'tabler:brand-instagram',
+      href: 'https://www.instagram.com/heguru_education_singapore?igsh=aWkwcXZoMDU3ajBp',
+    },
   ],
-  footNote:
-    '<div class="flex md:-mt-20"><a href="https://www.tripadvisor.com/Hotel_Review-g1016308-d1600275-Reviews-Pine_Hill_Resort_Kalaw-Kalaw_Shan_State.html" target="_blank" class="inline-block mr-5"></a> <a href="https://www.agoda.com/pine-hill-resort/hotel/kalaw-mm.html" target="_blank"  class="inline-block mr-3 bg-white pt-5 px-3 rounded"></a> <a href="http://www.booking.com/hotel/mm/pine-hill-resort.en-gb.html" target="_blank" class="inline-block mr-3 bg-white pt-5 px-3 rounded"></a> <a href="https://www.facebook.com/Pine-Hill-Resort-739814942807242" target="_blank"  class="inline-block mr-3 bg-white pt-5 px-3 rounded"><img src="/icons/facebook.png" class="w-12 h-auto rounded" /></a></div>',
+  footNote: '',
 };
