@@ -5,6 +5,7 @@ import Img from '~/components/common/Img.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import FloatImg from '~/components/common/FloatImg.astro';
 
 // const token = import.meta.env.VITE_API_TOKEN;
 // const base = import.meta.env.VITE_BACKEND_PATH;
@@ -63,19 +64,11 @@ const metadata = {
 };
 
 const bannerImg = '~/assets/images/edited.jpg';
-// const bannerImg = '~/assets/images/bg4.png';
 const bannerKid = '~/assets/images/banner-kid-1.png';
-const bannerBottom = '~/assets/images/bottom.png';
-// const toddlerImg = '~/assets/images/img6.jpg';
-// const preSchool1Img = '~/assets/images/img6.jpg';
-// const preSchool2Img = '~/assets/images/img6.jpg';
-// const prenatalImg = '~/assets/images/img6.jpg';
-// const onlineImg = '~/assets/images/img6.jpg';
+const bottomShape = '~/assets/images/bottom.png';
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
   <div class="w-full banner-area h-auto">
     <!-- <img src={bannerImg} class="w-full h-auto" alt="" /> -->
     <Img src={bannerImg} alt="App Store Image" class:list={'w-full rounded-lg border-red-300 border-2'} />
@@ -110,7 +103,6 @@ const bannerBottom = '~/assets/images/bottom.png';
           </div>
         </div>
       </div>
-      <!-- <Img src={bannerBottom} alt="App Store Image" class:list={'b-0'} /> -->
     </div>
   </div>
 
@@ -262,100 +254,12 @@ const bannerBottom = '~/assets/images/bottom.png';
             </div>
           </div>
         </div>
-
-        <!-- to create infinite -->
-        <!-- <div class="max-w-sm px-3 slide">
-          <div
-            class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
-            style="height: 450px;"
-          >
-            <a href="#">
-              <img class="rounded-t-lg img-hover" style="transition: transform 0.8s ease;" src="/img6.jpg" alt="" />
-            </a>
-            <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
-              <a href="#">
-                <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Infant & Toddler Class</h5>
-              </a>
-              <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
-                >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
-                strengthening the bond between parent and child, give your child a head start in building a larger
-                “vessel” for the brain.</span
-              >
-              <a
-                href="#"
-                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
-                >Read More...</a
-              >
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="max-w-sm px-3 slide">
-          <div
-            class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
-            style="height: 450px;"
-          >
-            <a href="#">
-              <img class="rounded-t-lg img-hover" style="transition: transform 0.8s ease;" src="/img13.jpg" alt="" />
-            </a>
-            <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
-              <a href="#">
-                <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Preschool I Class</h5>
-              </a>
-              <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
-                >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
-                strengthening the bond between parent and child, give your child a head start in building a larger
-                “vessel” for the brain.</span
-              >
-              <a
-                href="#"
-                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
-                >Read More...</a
-              >
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="max-w-sm px-3 slide">
-          <div
-            class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 pb-10 parent-div relative"
-            style="height: 450px;"
-          >
-            <a href="#">
-              <img class="rounded-t-lg img-hover" style="transition: transform 0.8s ease;" src="/img13.jpg" alt="" />
-            </a>
-            <div class="p-5 pt-4 absolute bottom-0 text-sm left-0 right-0 z-3 bg-white">
-              <a href="#">
-                <h5 class="text-gray-900 font-semibold text-lg tracking-tight mb-2">Preschool I Class</h5>
-              </a>
-              <span class="text-xs inline-block rounded mb-2 py-2 text-gray-500 italic"
-                >The Right Brain of infants and toddlers soak up information in vast volumes and at tremendous speed. By
-                strengthening the bond between parent and child, give your child a head start in building a larger
-                “vessel” for the brain.</span
-              >
-              <a
-                href="#"
-                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
-                >Read More...</a
-              >
-            </div>
-          </div>
-        </div> -->
       </div>
       <!-- Navigation buttons -->
       <button class="prev" onclick="prevSlide()">&#10094;</button>
       <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
   </div>
-  <!-- 
-    <div class="w-full my-20">
-        <div class="mx-auto w-9/12 mb-6">
-        <h3 class="text-center font-bold text-2xl text-gray-600 mb-3">Hotel Accomodation</h3>
-        <p class="text-center text-gray-400 mb-20 text-sm">
-            We all live in an age that belongs to the young at heart. Life that is becoming extremely fast
-        </p>
-        </div>
-    </div> -->
-
-  <!-- Features2 Widget ************** -->
 
   <div class="w-full bg-gray-800 my-5 py-20 pb-32 relative">
     <!-- <img src="/src/assets/images/section-top-shape.png" class="absolute top-0 w-full" alt="" /> -->
@@ -388,7 +292,8 @@ const bannerBottom = '~/assets/images/bottom.png';
         <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
       </Fragment>
     </Features2>
-    <img src="/src/assets/images/bottom.png" class="absolute -bottom-1 w-full" alt="" />
+    <!-- <img src="/src/assets/images/bottom.png" class="absolute -bottom-1 w-full" alt="" /> -->
+    <FloatImg src={bottomShape} alt="App Store Image" class:list={'absolute -bottom-1 w-full left-0 z-10'} />
   </div>
 
   <!-- Content Widget **************** -->
@@ -421,23 +326,6 @@ const bannerBottom = '~/assets/images/bottom.png';
       </Fragment>
     </Content>
   </div>
-
-  <!-- <div class="slider lg:w-9/12 mx-auto pb-20">
-    <div class="lg:w-9/12 mx-auto mb-10">
-      <h3 class="text-center font-bold text-3xl text-primary-500 mb-3">Bright the future of kids with us</h3>
-      <p class="text-center text-gray-400 text-sm">Train with expert instructors from Heguru.</p>
-    </div>
-    <div class="slides">
-      <img src="/img1.jpg" class="slide" alt="Image 1" />
-      <img src="/img2.jpg" class="slide" alt="Image 2" />
-      <img src="/img3.jpg" class="slide" alt="Image 3" />
-      <img src="/img4.jpg" class="slide" alt="Image 4" />
-      <img src="/img8.jpg" class="slide" alt="Image 5" />
-      <img src="/img6.jpg" class="slide" alt="Image 6" />
-    </div>
-    <button class="prev" onclick="prevSlide()">&#10094;</button>
-    <button class="next" onclick="nextSlide()">&#10095;</button>
-  </div> -->
 
   <div class="w-full bg-blue-50 py-20">
     <div class="lg:w-9/12 mx-auto mb-10">
@@ -477,45 +365,6 @@ const bannerBottom = '~/assets/images/bottom.png';
       >
       </iframe>
     </div>
-    <!-- <Testimonials
-      title="Words from Parents"
-      subtitle="See what parents are saying about Heguru."
-      testimonials={[
-        {
-          testimonial: `Youtube video links will show here. Youtube video links will show here. Youtube video links will show here`,
-          name: 'Su T. of New Zealand',
-          job: 'September 2015',
-          image: {
-            src: '/user.png',
-            alt: 'Emily Kennedy Image',
-          },
-        },
-        {
-          testimonial: `Youtube video links will show here. Youtube video links will show here. Youtube video links will show here`,
-          name: 'Sarah Hansen',
-          job: 'Photographer',
-          image: {
-            src: '/user.png',
-            alt: 'Sarah Hansen Image',
-          },
-        },
-        {
-          testimonial: `Youtube video links will show here. Youtube video links will show here. Youtube video links will show here`,
-          name: 'John C',
-          job: 'October 2015',
-          image: {
-            src: '/user.png',
-            alt: 'Mark Wilkinson Image',
-          },
-        },
-      ]}
-      callToAction={{
-        target: '_blank',
-        text: 'More testimonials...',
-        href: '/review',
-        icon: 'tabler:chevron-right',
-      }}
-    /> -->
   </div>
 
   <div class="w-full my-10" id="popular">
@@ -600,20 +449,6 @@ const bannerBottom = '~/assets/images/bottom.png';
   </script>
 
   <style>
-    /* @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-      33.4% {
-        transform: translateX(-33.4%);
-      }
-      67% {
-        transform: translateX(-67%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    } */
     .banner-area {
       /* height: 800px; */
       position: relative;
@@ -649,18 +484,6 @@ const bannerBottom = '~/assets/images/bottom.png';
     .slides {
       display: flex;
       transition: transform 0.5s ease-in-out;
-      /* transition-timing-function: linear; */
-      /* animation: slide 4s infinite ease-in-out; */
-
-      /* animation-name: slide;
-      animation-duration: 13s;
-      animation-delay: 0s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear; */
-
-      /* animation-fill-mode: reverse; */
-      /* animation-direction: alternate; */
-      /* max-height: 300px; */
     }
 
     /* Each slide */

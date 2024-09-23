@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
+import FloatImg from '~/components/common/FloatImg.astro';
 import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
@@ -23,13 +24,15 @@ export interface Props {
   theme?: string;
 }
 
+const topShape = '~/assets/images/section-top-shape.png';
+
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
 ---
 
 <footer
   class:list={[{ dark: theme === 'light' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose pt-10']}
 >
-  <img src="/src/assets/images/section-top-shape.png" class="absolute -top-1 left-0 w-full z-10" alt="" />
+  <FloatImg src={topShape} alt="App Store Image" class:list={'w-full absolute -top-1 left-0 z-10'} />
   <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
     <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
@@ -102,5 +105,4 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
       </div>
     </div>
   </div>
-  <!-- <img src="/src/assets/images/footer-bottom.png" class="absolute bottom-0 left-0 w-full" alt="" /> -->
 </footer>
