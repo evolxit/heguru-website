@@ -121,7 +121,14 @@
 
     function applyHeaderStylesOnScroll() {
       const header = document.querySelector('#header[data-aw-sticky-header]');
+      const headerShape = document.querySelector('#header-shape');
       if (!header) return;
+      if (lastKnownScrollPosition > 60) {
+        headerShape.style.display = 'none';
+      } else {
+        headerShape.style.display = 'block';
+      }
+
       if (lastKnownScrollPosition > 60 && !header.classList.contains('scroll')) {
         header.classList.add('scroll');
       } else if (lastKnownScrollPosition <= 60 && header.classList.contains('scroll')) {

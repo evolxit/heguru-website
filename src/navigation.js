@@ -12,16 +12,27 @@ export const headerData = {
     },
     {
       text: 'Programs',
-      href: getPermalink('/programs'),
+
+      links: [
+        {
+          text: 'All Programs',
+          href: getPermalink('/programs'),
+        },
+        {
+          text: 'School Calendar',
+          href: '#',
+        },
+        {
+          text: 'Schedule PIS',
+          href: '#',
+        },
+      ],
     },
     {
       text: 'Testimonials',
       href: getPermalink('/reviews'),
     },
-    {
-      text: 'Parents',
-      href: getPermalink('/about'),
-    },
+
     {
       text: 'FAQ',
       href: getPermalink('/faq'),
@@ -77,6 +88,16 @@ export const footerData = {
     {
       ariaLabel: 'Instagram',
       icon: 'tabler:brand-instagram',
+      href: 'https://www.instagram.com/heguru_education_singapore?igsh=aWkwcXZoMDU3ajBp',
+    },
+    {
+      ariaLabel: 'Twitter',
+      icon: 'tabler:brand-twitter',
+      href: 'https://www.facebook.com/Heguruyangoncentre?mibextid=LQQJ4d',
+    },
+    {
+      ariaLabel: 'Youtube',
+      icon: 'tabler:brand-youtube',
       href: 'https://www.instagram.com/heguru_education_singapore?igsh=aWkwcXZoMDU3ajBp',
     },
   ],
