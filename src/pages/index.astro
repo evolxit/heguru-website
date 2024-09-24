@@ -75,6 +75,7 @@ const balloonsImg = '~/assets/images/balloons.png';
   <div class="w-full banner-area h-auto">
     <div class="top-24 w-full" style="z-index: 3;">
       <div class="w-full mx-auto relative">
+        <!-- bg opacity icons -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -85,7 +86,6 @@ const balloonsImg = '~/assets/images/balloons.png';
             d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path><path d="M19 11h2m-1 -1v2"
           ></path></svg
         >
-
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -99,7 +99,6 @@ const balloonsImg = '~/assets/images/balloons.png';
             d="M22 17c0 -5.523 -4.477 -10 -10 -10s-10 4.477 -10 10"></path><path d="M18 17a6 6 0 1 0 -12 0"></path><path
             d="M14 17a2 2 0 1 0 -4 0"></path></svg
         >
-
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -109,7 +108,9 @@ const balloonsImg = '~/assets/images/balloons.png';
             d="M12.712 13.297l3.398 3.442a3.104 3.104 0 0 1 0 4.351a3.04 3.04 0 0 1 -4.036 .27l-.075 -.062l-.073 .062a3.04 3.04 0 0 1 -1.664 .634l-.203 .007a3.04 3.04 0 0 1 -2.17 -.91a3.104 3.104 0 0 1 .002 -4.354l3.397 -3.44a1 1 0 0 1 1.424 0m8.378 -5.407a3.04 3.04 0 0 1 .27 4.037l-.062 .073l.062 .075a3.04 3.04 0 0 1 .634 1.664l.007 .203a3.04 3.04 0 0 1 -.91 2.17a3.104 3.104 0 0 1 -4.354 -.002l-3.44 -3.397a1 1 0 0 1 0 -1.424l3.443 -3.399a3.104 3.104 0 0 1 4.351 0m-13.827 .002l3.44 3.397a1 1 0 0 1 0 1.424l-3.444 3.397a3.104 3.104 0 0 1 -4.351 0a3.04 3.04 0 0 1 -.27 -4.036l.062 -.075l-.062 -.073a3.04 3.04 0 0 1 -.634 -1.664l-.007 -.203c0 -.816 .328 -1.598 .91 -2.17a3.104 3.104 0 0 1 4.354 .002m6.678 -5.891a3.04 3.04 0 0 1 2.17 .91a3.104 3.104 0 0 1 -.002 4.354l-3.397 3.44a1 1 0 0 1 -1.424 0l-3.397 -3.444a3.104 3.104 0 0 1 0 -4.351a3.04 3.04 0 0 1 4.036 -.27l.073 .062l.075 -.062a3.04 3.04 0 0 1 1.664 -.634z"
           ></path></svg
         >
+        <!-- bg opacity icons -->
 
+        <!-- animate icons -->
         <FloatIcon src={flyImg} alt="App Store Image" class:list={'w-1 absolute animate-item-ylevel top-10 right-10'} />
         <FloatIcon
           src={balloonsImg}
@@ -125,6 +126,8 @@ const balloonsImg = '~/assets/images/balloons.png';
             d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
           ></path></svg
         >
+        <!-- animate icons -->
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:mt-20">
           <div class="lg:pl-20 px-10 mt-32 md:mt-0 place-self-center">
             <span
@@ -156,7 +159,7 @@ const balloonsImg = '~/assets/images/balloons.png';
     <FloatImg src={bottomShape} alt="App Store Image" class:list={'absolute -bottom-1 w-full left-0 z-10'} />
   </div>
 
-  <div class="w-full my-10 px-5" id="popular">
+  <div class="w-full my-10 px-5 relative" id="popular">
     <div class="slider lg:w-9/12 mx-auto py-10">
       <div class="lg:w-9/12 mx-auto mb-10">
         <h3 class="text-center font-bold text-3xl text-primary-500 mb-3">Our Programs</h3>
@@ -309,6 +312,90 @@ const balloonsImg = '~/assets/images/balloons.png';
       <button class="prev" onclick="prevSlide()">&#10094;</button>
       <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
+
+    <!-- bg opacity icons -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-asterisk absolute top-0 left-1/3 w-10 text-orange-100 -z-10"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12l8 -4.5"></path><path d="M12 12v9"
+      ></path><path d="M12 12l-8 -4.5"></path><path d="M12 12l8 4.5"></path><path d="M12 3v9"></path><path
+        d="M12 12l-8 4.5"></path></svg
+    >
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-asterisk absolute bottom-10 left-10 w-10 text-orange-100 -z-10"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12l8 -4.5"></path><path d="M12 12v9"
+      ></path><path d="M12 12l-8 -4.5"></path><path d="M12 12l8 4.5"></path><path d="M12 3v9"></path><path
+        d="M12 12l-8 4.5"></path></svg
+    >
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-asterisk absolute top-24 right-20 w-10 text-orange-100 -z-10"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12l8 -4.5"></path><path d="M12 12v9"
+      ></path><path d="M12 12l-8 -4.5"></path><path d="M12 12l8 4.5"></path><path d="M12 3v9"></path><path
+        d="M12 12l-8 4.5"></path></svg
+    >
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-asterisk absolute bottom-0 left-1/2 w-10 text-orange-100 -z-10"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12l8 -4.5"></path><path d="M12 12v9"
+      ></path><path d="M12 12l-8 -4.5"></path><path d="M12 12l8 4.5"></path><path d="M12 3v9"></path><path
+        d="M12 12l-8 4.5"></path></svg
+    >
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-assembly inline absolute bottom-32 -left-32 w-80 text-orange-50 -z-10"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+        d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
+      ></path><path
+        d="M15.5 9.422c.312 .18 .503 .515 .5 .876v3.277c0 .364 -.197 .7 -.515 .877l-3 1.922a1 1 0 0 1 -.97 0l-3 -1.922a1 1 0 0 1 -.515 -.876v-3.278c0 -.364 .197 -.7 .514 -.877l3 -1.79c.311 -.174 .69 -.174 1 0l3 1.79h-.014z"
+      ></path></svg
+    >
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      class="icon icon-tabler icons-tabler-filled icon-tabler-clover absolute bottom-0 -right-0 w-80 text-orange-50 -z-10"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+        d="M12.712 13.297l3.398 3.442a3.104 3.104 0 0 1 0 4.351a3.04 3.04 0 0 1 -4.036 .27l-.075 -.062l-.073 .062a3.04 3.04 0 0 1 -1.664 .634l-.203 .007a3.04 3.04 0 0 1 -2.17 -.91a3.104 3.104 0 0 1 .002 -4.354l3.397 -3.44a1 1 0 0 1 1.424 0m8.378 -5.407a3.04 3.04 0 0 1 .27 4.037l-.062 .073l.062 .075a3.04 3.04 0 0 1 .634 1.664l.007 .203a3.04 3.04 0 0 1 -.91 2.17a3.104 3.104 0 0 1 -4.354 -.002l-3.44 -3.397a1 1 0 0 1 0 -1.424l3.443 -3.399a3.104 3.104 0 0 1 4.351 0m-13.827 .002l3.44 3.397a1 1 0 0 1 0 1.424l-3.444 3.397a3.104 3.104 0 0 1 -4.351 0a3.04 3.04 0 0 1 -.27 -4.036l.062 -.075l-.062 -.073a3.04 3.04 0 0 1 -.634 -1.664l-.007 -.203c0 -.816 .328 -1.598 .91 -2.17a3.104 3.104 0 0 1 4.354 .002m6.678 -5.891a3.04 3.04 0 0 1 2.17 .91a3.104 3.104 0 0 1 -.002 4.354l-3.397 3.44a1 1 0 0 1 -1.424 0l-3.397 -3.444a3.104 3.104 0 0 1 0 -4.351a3.04 3.04 0 0 1 4.036 -.27l.073 .062l.075 -.062a3.04 3.04 0 0 1 1.664 -.634z"
+      ></path></svg
+    >
+    <!-- bg opacity icons -->
   </div>
 
   <div class="w-full bg-gray-800 my-5 py-20 pb-32 relative">
