@@ -1,6 +1,6 @@
 site:
   name: Heguru
-  site: 'https://astrowind.vercel.app'
+  site: 'https://heguru.netlify.app/'
   base: '/'
   trailingSlash: false
 
@@ -11,14 +11,14 @@ metadata:
   title:
     default: Heguru
     template: '%s — Heguru'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "\U0001F680 Right Brain Potential Development"
   robots:
     index: true
     follow: true
   openGraph:
     site_name: Heguru
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/img1.jpg'
         width: 1200
         height: 628
     type: website
