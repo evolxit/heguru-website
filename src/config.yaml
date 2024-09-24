@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: Heguru
     images:
-      - url: '~/assets/images/img1.jpg'
+      - url: '~/assets/images/heguru-front.jpg'
         width: 1200
         height: 628
     type: website
