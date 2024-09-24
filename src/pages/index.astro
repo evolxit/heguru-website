@@ -111,17 +111,17 @@ const balloonsImg = '~/assets/images/balloons.png';
         <!-- bg opacity icons -->
 
         <!-- animate icons -->
-        <FloatIcon src={flyImg} alt="App Store Image" class:list={'w-1 absolute animate-item-ylevel top-10 right-10'} />
+        <FloatIcon src={flyImg} alt="App Store Image" class:list={'w-1 absolute animate-item-xlevel top-10 right-10'} />
         <FloatIcon
           src={balloonsImg}
           alt="Backpack Image"
-          class:list={'w-1 absolute top-24 md:top-10 lg:top-20 xl:top-28 left-20 animate-item-xlevel '}
+          class:list={'w-1 absolute top-24 md:top-10 lg:top-20 xl:top-28 left-20 animate-item-ylevel '}
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          class="icon icon-tabler w-8 h-8 icons-tabler-filled icon-tabler-star bottom-20 left-1/2 animate-item"
+          class="icon icon-tabler w-8 h-8 icons-tabler-filled icon-tabler-star bottom-20 left-1/2 animate-item-triangle"
           ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
             d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
           ></path></svg
@@ -559,7 +559,14 @@ const balloonsImg = '~/assets/images/balloons.png';
 
     function showSlide(index) {
       const slides = document.querySelector('.slides');
-      const totalSlides = document.querySelectorAll('.slide').length / 2;
+      let totalSlides = document.querySelectorAll('.slide').length / 2;
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth < 768) {
+        totalSlides = document.querySelectorAll('.slide').length;
+      } else if (screenWidth >= 768 && screenWidth < 1200) {
+        totalSlides = document.querySelectorAll('.slide').length / 2 + 1;
+      }
 
       if (index >= totalSlides) {
         currentIndex = 0; // Loop back to the first slide
@@ -569,7 +576,13 @@ const balloonsImg = '~/assets/images/balloons.png';
         currentIndex = index;
       }
 
-      slides.style.transform = `translateX(-${currentIndex * 36}%)`;
+      if (screenWidth < 768) {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      } else if (screenWidth >= 768 && screenWidth < 1200) {
+        slides.style.transform = `translateX(-${currentIndex * 50}%)`;
+      } else {
+        slides.style.transform = `translateX(-${currentIndex * 36}%)`;
+      }
     }
 
     function nextSlide() {
@@ -625,10 +638,28 @@ const balloonsImg = '~/assets/images/balloons.png';
     }
 
     /* Each slide */
-    .slide {
-      min-width: 33.3%;
-      margin-right: 20px;
-      border-radius: 5px;
+    @media only screen and (max-width: 767px) {
+      .slide {
+        min-width: 100%;
+        margin-right: 0px;
+        border-radius: 5px;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      .slide {
+        min-width: 50%;
+        margin-right: 0px;
+        border-radius: 5px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      .slide {
+        min-width: 33.3%;
+        margin-right: 20px;
+        border-radius: 5px;
+      }
     }
 
     /* Navigation buttons */
@@ -652,21 +683,21 @@ const balloonsImg = '~/assets/images/balloons.png';
       right: 0;
     }
 
-    .animate-item {
+    .animate-item-triangle {
       position: absolute;
       animation-name: triangle;
       animation-duration: 6s;
       animation-iteration-count: infinite;
     }
-    .animate-item-xlevel {
-      position: absolute;
-      animation-name: xlevel;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-    }
     .animate-item-ylevel {
       position: absolute;
       animation-name: ylevel;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    .animate-item-xlevel {
+      position: absolute;
+      animation-name: xlevel;
       animation-duration: 5s;
       animation-iteration-count: infinite;
     }
@@ -703,7 +734,7 @@ const balloonsImg = '~/assets/images/balloons.png';
         transform: translateY(-30px);
       }
     }
-    @keyframes xlevel {
+    @keyframes ylevel {
       0% {
         color: orange;
         /* left: 20px;
@@ -725,7 +756,7 @@ const balloonsImg = '~/assets/images/balloons.png';
         transform: translateY(-30px);
       }
     }
-    @keyframes ylevel {
+    @keyframes xlevel {
       0% {
         color: red;
         /* left: 20px;
