@@ -69,7 +69,6 @@ export const footerData = {
     {
       title: '',
       links: [
-        { text: 'Parents', href: getPermalink('/') },
         { text: 'FAQ', href: getPermalink('/faq') },
         { text: 'Testimonials', href: getPermalink('/reviews') },
       ],
