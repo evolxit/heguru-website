@@ -41,9 +41,23 @@ export const headerData = {
       text: 'Activity',
       href: getPermalink('/activity'),
     },
+
     {
       text: 'Contact',
-      href: getPermalink('/contact'),
+      links: [
+        {
+          text: 'Contact Us',
+          href: getPermalink('/contact'),
+        },
+        {
+          text: 'Register',
+          href: getPermalink('/register'),
+        },
+        {
+          text: 'Terms & Conditions',
+          href: getPermalink('/terms'),
+        },
+      ],
     },
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],

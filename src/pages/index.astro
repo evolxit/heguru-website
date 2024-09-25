@@ -117,7 +117,6 @@ const balloonsImg = '~/assets/images/balloons.png';
           alt="Backpack Image"
           class:list={'w-1 absolute top-24 md:top-10 lg:top-20 xl:top-28 left-20 animate-item-ylevel '}
         />
-
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -139,16 +138,6 @@ const balloonsImg = '~/assets/images/balloons.png';
             d="M11 10.02l-.062 -.309l-.081 -.35l-.075 -.29l-.092 -.328l-.11 -.358l-.128 -.382l-.148 -.399c-.658 -1.687 -1.844 -3.634 -3.804 -3.604c-2.324 .038 -3.19 2.493 -1.5 3.025l-.148 .045l-.164 .058a4.13 4.13 0 0 0 -.1 .039l-.22 .098c-.588 .28 -1.368 .832 -1.368 1.777c0 1.513 3 3 8 .977z"
           ></path></svg
         >
-
-        <!-- <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          class="icon icon-tabler w-8 h-8 icons-tabler-filled icon-tabler-star bottom-20 left-1/2 animate-item-triangle"
-          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-          ></path></svg
-        > -->
         <!-- animate icons -->
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:mt-20">
@@ -589,8 +578,9 @@ const balloonsImg = '~/assets/images/balloons.png';
           providing the ideal education for children and their parents. Heguru classes start from the prenatal stage,
           when the baby is still in the mother’s womb.
         </p>
-        <a href="#"
-          ><span class="ml-10 inline-block mt-10 px-5 py-2 bg-primary-500 rounded text-white text-sm font-semibold"
+        <a href="/contact"
+          ><span
+            class="ml-10 inline-block mt-10 px-5 py-2 bg-primary-500 rounded text-white text-sm font-semibold hover:bg-primary-700"
             >Contact Us</span
           ></a
         >
@@ -681,53 +671,19 @@ const balloonsImg = '~/assets/images/balloons.png';
       ></path></svg
     >
 
-    <Features3
-      title="Contact Us"
-      subtitle="We’re here to help and answer any question you might have."
-      columns={4}
-      items={[
-        {
-          title: 'Phone',
-          icon: 'tabler:phone',
-          callToAction: {
-            target: '_blank',
-            text: '<span class="font-bold text-sm italic">School</span><br/><span class="text-sm">+959-123-456, 457, 458, <br/>+95-9-1234569</span><br/> <span class="font-bold text-sm italic">Office</span><br/><span class="text-sm">+959-123-456, 457, 458</span>',
-            href: '#',
-            variant: 'link',
-          },
-        },
-        {
-          title: 'Email',
-          icon: 'tabler:mail',
-          callToAction: {
-            target: '_blank',
-            text: '<span class="text-sm">heguru@gmail.com contact@heguru.com</span>',
-            href: '#',
-            variant: 'link',
-          },
-        },
-        {
-          title: 'Fax',
-          icon: 'tabler:printer',
-          callToAction: {
-            target: '_blank',
-            text: '<span class="font-bold text-sm italic">School</span><br/><span class="text-sm">+959-123-456, 457, 458, <br/>+95-9-1234569</span><br/> <span class="font-bold text-sm italic">Office</span><br/><span class="text-sm">+959-123-456, 457, 458</span>',
-            href: '#',
-            variant: 'link',
-          },
-        },
-        {
-          title: 'Address',
-          icon: 'tabler:map',
-          callToAction: {
-            target: '_blank',
-            text: '<span class="text-sm font-bold italic">School</span><br/><span class="text-sm">No. 100, Main Road, Yangon, Myanmar</span><br/><span class="text-sm font-bold italic">Japan Office</span><br/><span class="text-sm">No.6, Township, City</span>',
-            href: '#',
-            variant: 'link',
-          },
-        },
-      ]}
-    />
+    <div class="lg:w-9/12 mx-auto">
+      <h3 class="text-center font-bold text-3xl text-primary-500">Contact Us</h3>
+      <p class="text-center text-gray-400 text-sm">We’re here to help and answer any question you might have.</p>
+
+      <div class="w-full flex justify-center mt-10">
+        <a href="/contact"
+          ><span
+            class="inline-block mx-auto px-5 py-2 bg-primary-500 rounded text-white text-sm font-semibold hover:bg-primary-700"
+            >Contact Us</span
+          ></a
+        >
+      </div>
+    </div>
   </div>
 
   <script>
