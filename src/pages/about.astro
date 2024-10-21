@@ -1,6 +1,4 @@
 ---
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -11,104 +9,422 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
   <div class="lg:w-9/12 mx-auto">
-    <div class="lg:w-9/12 mx-auto mt-32">
-      <h3 class="text-center font-bold text-3xl text-primary-500 pt-10">About Heguru</h3>
+    <div class="lg:w-9/12 mx-auto mt-20">
+      <h3 class="text-center font-bold text-3xl text-primary-500 pt-10">About Us</h3>
       <!-- <p class="text-center text-gray-400 text-sm">Photos of our Activities!</p> -->
     </div>
 
-    <Hero
-      tagline="Contact Us"
-      class:list={'pt-0'}
-      image={{
-        src: '/img1.jpg',
-        alt: 'Caos Image',
-      }}
-    >
-      <!-- <Fragment slot="title"> About Heguru </Fragment> -->
+    <div class="mt-10">
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">Education Philosophy</h1>
+      <p class="mb-5">
+        We at Heguru aim to nurture people who can make meaningful contributions to the happiness and evolutionary
+        development of human beings in the world. <br />We strive to help people develop the ability to judge matters
+        rationally with empathy and insight. <br />Heguru education cultivates the heart to be filled with love and
+        bravery.
+      </p>
+      <p class="mb-5">
+        Heguru သည် ကမ္ဘာပေါ်ရှိ လူသားများ၏ ပျော်ရွှင်မှုနှင့် ဖွံ့ဖြိုးတိုးတက်မှုအတွက် အဓိပ္ပာယ်ပြည့်ဝသော
+        ပံ့ပိုးကူညီမှုများကို လုပ်ဆောင်နိုင်မည့်သူများအား ပြုစုပျိုးထောင်ရန် ရည်ရွယ်ပါသည်။ <br />Heguru သည်
+        အရေးကိစ္စများအပေါ် စာနာမှု၊ထိုးထွင်းသိမြင်မှုတို့ဖြင့် ဆင်ခြင်တုံတရားရှိရှိ စီရင်ဆုံးဖြတ်နိုင်စွမ်း တိုးတက်စေရန်
+        ကူညီပေးပါသည်။ <br />Heguru ပညာရေးသည် စိတ်နှလုံးသားကို ချစ်ခြင်းမေတ္တာနှင့် ရဲစွမ်းသတ္တိတို့ပြည့်ဝစေရန်
+        ပြုစုပျိုးထောင်ပေးပါသည်။
+      </p>
 
-      <Fragment slot="subtitle">
-        <div class="text-justify text-gray-500">
-          Heguru is an educational network of classes for young children, based in Tachikawa, Tokyo, and committed to
-          providing the ideal education for children and their parents. Heguru classes start from the prenatal stage,
-          when the baby is still in the mother’s womb. The important thing at this earliest stage is to keep the
-          mother’s body healthy and in balance, and to keep her in a positive state of mind. As the proverb “what is
-          learned in the cradle is carried to the grave” tells us, the infant and toddler stage right after birth is
-          crucial. During these early years, it is important to build the “foundational strength” that will prove to be
-          invaluable as your child grows. Building this “foundational strength” starts with nurturing the “mind and
-          heart”. Children learn to control their own minds, and interact with others in a considerate and kind-hearted
-          way. Furthermore, as they develop their capacities for concentration and imagination, they build a brain
-          circuitry that can process all kinds of information through imaging and visualization. The younger the age at
-          which children start developing this circuitry, the greater its processing power will be, as they get older.
-          By possessing both the regular circuitry of the Left Brain, which processes information through language, and
-          the imaging circuitry, which processes information through imaging and visualization, children’s overall brain
-          processing speeds become faster, and this allows for the possibility of simultaneous processing, which is a
-          feature of the Right Brain. In other words, our students learn to use their brains in a way that most people
-          can only yearn after. To possess these two circuitries, children’s Right Brains need to be tapped into from an
-          early age, and this gives them an overwhelming advantage when it comes to examinations for primary and
-          secondary schools, as well as university. Furthermore, a remarkable ability that comes with Right Brain
-          Development is Hado Reading, as introduced and explained elsewhere on this site. Absorbing the entire contents
-          of a book instantly by just flipping through its pages is a skill and technique unique to the Right Brain. In
-          the past, our classes at Heguru have received a great amount of media and TV coverage with particular regard
-          to this Hado Reading method, and we remain the only educational network in the world that has the proven
-          ability and knowhow to teach and develop this particular skill. Hado Reading improves not just academic
-          performance, but also contributes to markedly greater success in sports, as well as arts such as music and
-          painting. Heguru’s infant education creates “the roots and branches of a child’s abilities”. It is not a
-          merely a place that teaches techniques and methods for passing exams. It is a place focused on unlocking the
-          innate potential of children, and cultivating these talents to the greatest possible extent. Japan has many
-          educational organizations specializing in teaching young children, but we at Heguru are the leading experts in
-          building children’s futures through Right Brain-focused teaching, and we currently operate schools in Tokyo
-          (Tachikawa), Nagoya, Niigata, Tochigi and several locations outside of Japan. For any parents thinking about
-          infant classes for your child, why not sign up for a free trial at Heguru.
-        </div>
-      </Fragment>
-    </Hero>
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">
+        The Heguru Method: Unlocking Potential Through Right Brain Education
+      </h1>
+      <p class="mb-5">
+        The Heguru Method is a premier Right Brain Education program in Japan, founded by Mr. Hirotada Henmi and Mrs.
+        Ruiko Henmi after 30 years of dedicated research and development in Tokyo.<br />
 
-    <Features3
-      title="Contact Us"
-      subtitle="We’re here to help and answer any question you might have."
-      columns={4}
-      items={[
-        {
-          title: 'Phone',
-          icon: 'tabler:phone',
-          callToAction: {
-            target: '_blank',
-            text: '<span class="font-bold text-sm italic">School</span><br/><span class="text-sm">+959-123-456, 457, 458, <br/>+95-9-1234569</span><br/> <span class="font-bold text-sm italic">Office</span><br/><span class="text-sm">+959-123-456, 457, 458</span>',
-            href: '#',
-            variant: 'link',
-          },
-        },
-        {
-          title: 'Email',
-          icon: 'tabler:mail',
-          callToAction: {
-            target: '_blank',
-            text: '<span class="text-sm">heguru@gmail.com contact@heguru.com</span>',
-            href: '#',
-            variant: 'link',
-          },
-        },
-        {
-          title: 'Fax',
-          icon: 'tabler:printer',
-          callToAction: {
-            target: '_blank',
-            text: '<span class="font-bold text-sm italic">School</span><br/><span class="text-sm">+959-123-456, 457, 458, <br/>+95-9-1234569</span><br/> <span class="font-bold text-sm italic">Office</span><br/><span class="text-sm">+959-123-456, 457, 458</span>',
-            href: '#',
-            variant: 'link',
-          },
-        },
-        {
-          title: 'Address',
-          icon: 'tabler:map',
-          callToAction: {
-            target: '_blank',
-            text: '<span class="text-sm font-bold italic">School</span><br/><span class="text-sm">No. 100, Main Road, Yangon, Myanmar</span><br/><span class="text-sm font-bold italic">Japan Office</span><br/><span class="text-sm">No.6, Township, City</span>',
-            href: '#',
-            variant: 'link',
-          },
-        },
-      ]}
-    />
+        Our Infant Classes, designed for children from birth, nurture their innate talents in a fun and relaxed
+        environment. We focus on providing our students with a strong foundation that empowers them to excel in any
+        field or subject they choose.<br />
+
+        In our Classes for Children, we introduce a vast array of information at high speed, a hallmark of the Heguru
+        Method. This unique learning experience is best appreciated firsthand, allowing children to engage in a dynamic
+        and enriching atmosphere that fosters creativity and cognitive growth.<br />
+      </p>
+
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">
+        Heguru Method: ညာဘက်ဦးနှောက်ပညာရေးမှတဆင့် အလားအလာကောင်းများကို ဖွင့်လှစ်ခြင်း
+      </h1>
+      <p class="mb-5">
+        Heguru Method သည် မစ္စတာ Hirotada Henmi နှင့် မစ္စစ် Ruiko Henmi တို့မှ တိုကျိုမြို့တွင် နှစ်ပေါင်း 30 ကျော်
+        သုတေသန နှင့် ဖွံ့ဖြိုးတိုးတက်မှုများလုပ်ဆောင်ပြီးနောက် စတင်တည်ထောင်ခဲ့သော ဂျပန်နိုင်ငံ၏ ထိပ်တန်း Right Brain
+        Education ပရိုဂရမ် တစ်ခုဖြစ်ပါသည်။<br />
+
+        မွေးကင်းစအရွယ်ကလေးငယ်များအတွက် ရည်ရွယ်ဖွင့်လှစ်ထားသော Infant အတန်းများသည် ပျော်ရွှင်စရာကောင်းသော ပတ်ဝန်းကျင်တွင်
+        ကလေးငယ်များ၏ မွေးရာပါစွမ်းရည်များကို ပြုစုပျိုးထောင်ပေးခြင်း ဖြစ်ပါသည်။ Heguru တွင် ကျောင်းသားများအား
+        သူတို့ရွေးချယ်သော မည်သည့်နယ်ပယ် သို့မဟုတ် မည်သည့် ဘာသာရပ်တွင်မဆို ထူးချွန်ရန် အထောက်အပံ့ဖြစ်စေမည့်
+        ခိုင်မာသောအခြေခံကို ပေးစွမ်းနိုင်ဖို့ အာရုံစိုက် လုပ်ဆောင်လျက်ရှိပါသည်။ <br />
+
+        ကလေးများအတွက်ဖွင့်လှစ်ထားသော အတန်းများတွင် Heguru Method ၏ မူပိုင်အမှတ်အသားဖြစ်သော အရှိန်လျင်မြန်စွာဖြင့်
+        အချက်အလက်ပေါင်းမြောက်များစွာကို မိတ်ဆက်ပေးပါသည်။ ထိုထူးခြားသော သင်ယူမှုအတွေ့အကြုံသည် တီထွင်ဖန်တီးနိုင်စွမ်းနှင့်
+        သိမြင်နိုင်စွမ်းကို တိုးတက်စေမည့် တက်ကြွကောင်းမွန်သော ပတ်ဝန်းကျင်တွင် ကလေးငယ်များကို ကိုယ်တိုင်
+        ပါဝင်ခံစားစေခြင်းဖြစ်သောကြောင့် အလွန်တန်ဖိုးရှိပါသည်။
+        <br />
+      </p>
+
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">Why Choose Heguru?</h1>
+      <p class="mb-5">
+        Discover how Heguru stands out from other brain training programs:<br /><br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor"
+          class="size-6 inline text-blue-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          ></path>
+        </svg>
+        World Leader: Experience our high-volume, high-speed classes supported by a unique two-teacher system!<br /><br
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor"
+          class="size-6 inline text-blue-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          ></path>
+        </svg> Bilingual Excellence: Our standard classes include English lessons, cultivating some of the best bilingual
+        students.<br /><br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor"
+          class="size-6 inline text-blue-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          ></path>
+        </svg> Super-Memory Skills: We equip children with exceptional memory techniques that set them apart.<br /><br
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor"
+          class="size-6 inline text-blue-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          ></path>
+        </svg> Comprehensive Development: Our curriculum includes numerous exercises that effectively train the Left Brain
+        as well.<br /><br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor"
+          class="size-6 inline text-blue-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          ></path>
+        </svg> Proven Success: Many of our students have gained acceptance to top universities worldwide, showcasing the
+        effectiveness of our methods in developing strong skills across science, arts, music, and sports.
+      </p>
+
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">Heguru ကို ဘာကြောင့် ရွေးချယ်သင့်တာလဲ?</h1>
+      <p class="mb-5">
+        အခြား Brain Training ကျောင်းများနှင့်မတူဘဲ Heguru က မည်ကဲ့သို့ ကွဲပြားထင်ရှားနေသည်ကို စူးစမ်းလေ့လာကြည့်ပါ။ <br
+        /><br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor"
+          class="size-6 inline text-blue-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          ></path>
+        </svg> ကမ္ဘာ့ထိပ်တန်းအရည်အသွေး : ဆရာ/ဆရာမ (၂) ယောက်နှင့်အတူ သင်ကြားပေးသော တမူထူးခြားသည့်စနစ်နှင့် Heguru ၏ အသံနှုန်းမြင့်
+        အမြန်နှုန်းမြင့် သင်တန်းများကို ကိုယ်တိုင်တက်ရောက်ခံစားကြည့်နိုင်ပါသည်။ <br /><br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor"
+          class="size-6 inline text-blue-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          ></path>
+        </svg> Bilingual အတွေ့အကြုံ : စံချိန်စံညွှန်းနှင့်ပြည့်မီသော ကျွန်ုပ်တို့၏ အင်္ဂလိပ်သင်ခန်းစာများသည် အထူးချွန်ဆုံး
+        bilingual ကျောင်းသား/ကျောင်းသူများကို မွေးထုတ်ပေးလျက်ရှိပါသည်။ <br /><br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor"
+          class="size-6 inline text-blue-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          ></path>
+        </svg> အံ့ဩစရာမှတ်ဉာဏ်စွမ်းရည် : ကျွန်ုပ်တို့သည် ကလေးငယ်များအား အများထက်သာလွန်စေမည့် ထူးခြားသော မှတ်ဉာဏ်လေ့ကျင့်ရေးနည်းလမ်းများကို
+        သင်ကြားပေးနေပါသည်။ <br /><br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor"
+          class="size-6 inline text-blue-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          ></path>
+        </svg> ဘက်စုံဖွံ့ဖြိုးတိုးတက်မှု : Heguru ၏ သင်ရိုးညွန်းတမ်းများတွင် ဘယ်ဖက်ဦးနှောက်ကိုပါ ထိထိရောက်ရောက် လေ့ကျင့်ပေးသည့်
+        လေ့ကျင့်ခန်းပေါင်းမြောက်များစွာ ပါဝင်ပါသည်။ <br /><br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor"
+          class="size-6 inline text-blue-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          ></path>
+        </svg> သက်သေခိုင်မာသော အောင်မြင်မှု : Heguru ကျောင်းသားများသည် ကမ္ဘာ့အဆင့် ထိပ်တန်းတက္ကသိုလ်အသီးသီးတွင် ဝင်ခွင့်များရရှိခဲ့ကြပြီး
+        ၎င်းသည် သိပ္ပံ၊ အနုပညာ၊ ဂီတနှင့် အားကစားစသည်တို့တွင် အရည်အချင်းခိုင်ခိုင်မာမာ တိုးတက်စေသည့် ကျွန်ုပ်တို့၏ သင်ကြားပုံနည်းလမ်းများ
+        ထိရောက်ကြောင်းကို သက်သေပြနေကြပါသည်။
+      </p>
+
+      <p class="mb-5">
+        Our students achieve incredible learning abilities in half the time—or even as little as one-tenth—of what is
+        typically required for studying!<br />
+        At Heguru, children are encouraged to explore their own interests while still achieving impressive results. Through
+        our “high-efficiency learning” approach, these skills become second nature, transferable across various subjects
+        and fields.<br />
+        The key to mastering high-efficiency learning lies in unlocking the subconscious and developing the Right Brain.
+        Heguru offers specialized classes for children focused on enhancing Right Brain capabilities.<br />
+      </p>
+
+      <p class="mb-5">
+        Heguru ကျောင်းသားများသည် မယုံနိုင်လောက်ဖွယ် သင်ယူခြင်းစွမ်းရည်ကိုပိုင်ဆိုင်ကြပြီး စာလေ့လာရာတွင်
+        ပုံမှန်လိုအပ်သောအချိန်၏ ထက်ဝက် သို့ ဆယ်ပုံတစ်ပုံလောက်အချိန်အတွင်း၌ပင် သင်ယူနိုင်စွမ်းရှိကြသည်။<br />
+
+        Heguru တွင် ကလေးငယ်များသည် အံ့အားသင့်ဖွယ်ရလဒ်ကောင်းများကိုရရှိရင်းဖြင့်ပင် တစ်ချိန်တည်းမှာလည်း
+        သူတို့စိတ်ဝင်စားသောအရာများကို လွတ်လပ်စွာ စူးစမ်းလေ့လာကြရန် တိုက်တွန်းအားပေးပါသည်။ <br />
+        Heguru ၏ "စွမ်းဆောင်ရည်မြင့်မားသောသင်ယူမှု" ပုံစံမှတဆင့် ၎င်းစွမ်းရည်များသည် အကျင့်ဖြစ်လာပြီး ဘာသာရပ်၊နယ်ပယ်များစွာသို့
+        ထိုစွမ်းရည်များကို လွှဲပြောင်းအသုံးချနိုင်မည်ဖြစ်ပါသည်။<br />
+
+        "စွမ်းဆောင်ရည်မြင့်မားသောသင်ယူမှု" ကို ကျွမ်းကျင်ပိုင်နိုင်ဖို့ အဓိကသော့ချက်မှာ မသိစိတ်ကိုအလင်းဖွင့်ပေးပြီး
+        ညာဖက်ဦးနှောက်ကို ဖွံ့ဖြိုးစေခြင်းဖြစ်ပါသည်။ Heguru သည်ကလေးငယ်များအတွက် ညာဖက်ဦးနှောက်ဖွံဖြိုးမှုကို
+        အထူးပြုသင်ကြားသော သင်တန်းများကို ပို့ချပေးနေခြင်းဖြစ်ပါသည်။
+        <br />
+      </p>
+
+      <h1 class="font-bold text-blue-600 text-xl mt-10">Heguru Education has 5 Purposes:</h1>
+      <h1 class="font-bold text-blue-600 text-xl mb-3">Heguru သင်တန်း၏ အဓိကရည်ရွယ်ချက် (၅)ချက်</h1>
+
+      <p class="mb-5">
+        <strong>Enlarging the "Vessel" for the Brain</strong><br />
+        Our primary focus is to provide early training that enables the Right Brain—the potential brain—to be activated as
+        quickly as possible. A key shortcut to achieving this is to develop a balance between the Implementation Zone (IZ)
+        and the Basic Zone (BZ), which encompasses nine foundational skills.<br />
+        It is essential for parents to have complete faith in their children's ability to unlock their Right Brain, as this
+        support plays a crucial role in their development.
+      </p>
+
+      <p class="mb-5">
+        <strong>၁. ဦးနှောက်သွေးကြောများကို ကြီးထွားစေခြင်း</strong>
+        <br />
+        အဓိကအားဖြင့် ညာဖက်ဦးနှောက်ကို ဖွံ ဖြိုးတိုးတက်စေရန် သင်ကြားပိုချချက်များသည် ဦးနှောက် သွေးကြောများကို လျင်မြန်စွာ
+        ကြီးထွားစေသည်။ ထိုသို့ဖြစ်လာစေရန် ဦးနှောက်၏ အရေးပါသော နယ်ပယ်များနှင့် ဆက်လက်ဖွံဖြိုးတိုးတက်ရန် လိုအပ်သည့် နယ်ပယ်များကို
+        အချိုးအစားညီညီ ဖွံဖြိုးအောင်ပြုလုပ်ဆောင်ရွက်ရန်မှာ လျင်မြန်သော နည်းလမ်းဖြစ်သည်။ မိဘများအနေဖြင့် မိမိကလေး၏ ညာဖက်ဦးနှောက်
+        ဖွံဖြိုးလာစေရန် ကလေး၏ စွမ်းဆောင်ရည်၊ အရည်အချင်းနှင့် ပတ်သက်၍ ယုံကြည်ချက် ခိုင်ခိုင်မာမာ ထားရှိရမည်။
+      </p>
+
+      <p class="mb-5">
+        <strong>Drawing Out Multiple Talents from Children's Personalities</strong>
+        <br />
+        To truly engage with a subject, children need the time and space to immerse themselves fully. This deep involvement
+        in an activity not only enhances their enjoyment but also plays a crucial role in uncovering their unique talents.
+        By allowing children to explore their interests, we can significantly elevate their capacities and foster a love
+        for learning that lasts a lifetime.
+      </p>
+
+      <p class="mb-5">
+        <strong>၂. ကလေးငယ်၏ ပင်ကိုစိတ်နေစိတ်ထား အကျင့်စရိုက်မှ များပြားလှစွာသော စွမ်းရည်များကို ထုတ်ဖော်ခြင်း</strong>
+        <br />
+        လုံလောက်သောအချိန်ပေးပြီး စွမ်းဆောင်ရည်မြင့် သင်တန်းများကို အဆုံးသတ်အထိ သင်ကြား မည်ဆိုပါက ရလဒ်ကောင်းများ ရရှိစေနိုင်မည်ဖြစ်သည်။
+        ကလေးများ၏ အာရုံစူးစိုက်မှု အပြည့် အဝရရှိနေချိန်တွင် လမ်းညွှန်သင်ကြားပိုချလျှင် စွမ်းရည်ပိုမိုမြင့်မားစေမည်ဖြစ်သည်။
+      </p>
+
+      <p class="mb-5">
+        <strong>Fostering Self-Confidence and Unlocking Potential</strong><br />
+        Children experience genuine excitement when they discover their abilities, no matter how small. It’s vital to provide
+        them with numerous opportunities to enjoy these moments, as they significantly contribute to building self-confidence.
+        Parents play a crucial role in this journey by wholeheartedly believing in their children's potential.
+      </p>
+
+      <p class="mb-5">
+        <strong>၃. မိမိကိုယ်ကို ယုံကြည်ခြင်းနှင့် ကိုယ်ပိုင်အရည်အချင်းများ အသုံးချတတ်စေရန် လမ်းညွန်ပြသခြင်း</strong>
+        <br />
+        ကလေးများသည် မိမိ၏ လုပ်ဆောင်ချက်တစ်ခုကို အောင်မြင်စွာလုပ်ဆောင်နိုင်လျှင် စိတ်လှုပ်ရှား လာကာ လွန်စွာပျော်ရွှင်တက်သည်။
+        သိုဖြစ်၍ ကလေးငယ်များ ပျော်ပျော်ရွှင်ရွှင် မိမိကိုယ်တိုင် အောင်မြင်စွာ လုပ်ဆောင်နိုင်စွမ်း ရှိစေရန် အခွင့်အလမ်းများကို
+        ဖန်တီးပေးရန် လိုအပ်သည်။ မိဘများအနေဖြင့် မိမိတို ကလေး၏ လုပ်ဆောင်နိုင်စွမ်းနှင့် ပတ်သက်၍ ယုံကြည်ပေးရန်မှာလည်း အရေးကြီးသော
+        အချက်ဖြစ်သည်။
+      </p>
+
+      <p class="mb-5">
+        <strong>Cultivating the Power of the Mind (EQ)</strong>
+        <br />
+        The family plays a crucial role in nurturing children's emotional intelligence (EQ). Providing unconditional love
+        and engaging in learning together creates a supportive environment for growth. At Heguru, we are committed to offering
+        support at various levels to foster an atmosphere that encourages the development of the mind.
+      </p>
+
+      <p class="mb-5">
+        <strong>၄. စိတ်ခံစားချက်ဆိုင်ရာ စွမ်းရည်များကို ပျိုးထောင်ပေးခြင်း (EQ မြှင့်တင်ခြင်း)</strong>
+        <br />
+        ကလေးများ၏ စိတ်ခံစားချက်ဆိုင်ရာ စွမ်းရည်များကို ပျိုးထောင်ပေးရာတွင် မိသားစုဝင်များ တစ်တပ်တစ်အား ပါဝင်မှုသည် အလွန်အရေးကြီးသည်။
+        ကလေးများသည် ချစ်ခြင်းမေတ္တာကို အပြည့်အဝရရှိရန် လိုအပ်သည်။ မိမိနှင့် ကလေးကြား နားလည်မှုနှင့် မေတ္တာတရား ပိုမိုတိုးပွားလာစေရန်
+        မိမိကလေးနှင့်အတူ ကစားခြင်း၊ စာလေ့လာခြင်းသည် အကောင်းဆုံး လုပ်ဆောင်ချက်ဖြစ်သည်။ Heguru သင်တန်းကျောင်းတွင် ကလေးများ၏
+        စိတ်ခံစားချက်ဆိုင်ရာ စွမ်းရည်များ (EQ) ကို တိုးတက်စေရန် ရည်ရွယ်၍ သင်ကြားမှု နည်းလမ်းကောင်းများစွာကို ထည့်သွင်းသင်ကြားပေးသည်။
+      </p>
+
+      <p class="mb-5">
+        <strong>Cultivating Genuine Thinking Power</strong>
+        <br />
+        Fostering the ability to think logically and evaluate situations calmly is essential for children's development.
+        Encouraging them to ask "Why?" without hesitation nurtures curiosity and critical thinking. From a young age, parents
+        should engage in enjoyable experiences with their children to support this growth. To help children excel in mathematics
+        (logic), it’s important to strengthen the Left Brain as well. We promote logical thinking in our Pre-School and Primary
+        Classes, laying a solid foundation for their future learning.
+      </p>
+
+      <p class="mb-5">
+        <strong>၅. စိတ်ကူးစိတ်သန်း အတွေးအခေါ်ကို မြှင့်တင်ပေးခြင်း</strong>
+        <br />
+        Heguru သင်တန်းကျောင်းတွင် ကလေးငယ်များ၏ တွေးခေါ်နိုင်စွမ်း စွမ်းရည်မြှင့်တင်ပေးပြီး ပြဿနာများကို အေးအေးဆေးဆေး ဖြေရှင်းတတ်စေရန်
+        လေ့ကျင့်ပေးသည်။ ထို့အပြင် အကြောင်းအရာတစ်ခုကို စူးစမ်း လေ့လာရာနှင့် လုပ်ကိုင်ဆောင်ရွက်ရာတွင် တွန့်ဆုတ်မနေဘဲ ရဲရဲဝံ့ဝံ့
+        မေးမြန်းနိုင်ခြင်းနှင့် လုပ်ကိုင်တတ်ခြင်း တို့ကိုပါ ပျိုးထောင်ပေးသည်။ မိဘများသည် ကလေးများ ငယ်ရွယ်စဉ်တွင် ပျော်ရွှင်ဖွယ်ကောင်းသော
+        အမှတ်တရများကို ဖန်တီးပေးခြင်းမှာလည်း ကလေးများ၏ ဖွံဖြိုးမှုကို အထောက်အကူပြုသည်။ ထိုသို့ လုပ်ဆောင်ချက်များကြောင့် သင်္ချာဘာသာရပ်တွင်
+        တွေးခေါ်နိုင်မှု တိုးတက်လာရုံသာမက ဘယ်ဖက်ဦးနှောက် ၏ ဖွံဖြိုးမှုကိုပါ အထောက်အကူပြုသည်။ စိတ်ကူးစိတ်သန်းနှင့် တွေးခေါ်နိုင်စွမ်း
+        စွမ်းရည်များကို တိုးတက်စေရန် မူကြိုအဆင့်နှင့် မူလတန်းအဆင့်များတွင် ထည့်သွင်း သင်ကြားပေးပါသည်။
+      </p>
+
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">The person who developed "Hado Reading"</h1>
+      <p class="mb-5">
+        <strong>HEGL (Heguru) CEO Ruiko Henmi</strong>
+        <br />
+        In 1997, I developed a groundbreaking technique for reading and comprehending a book simply by flipping through its
+        pages rapidly. I named this method "Hado Reading" (Wave Reading) because it transcends traditional speed reading.<br
+        />
+        "Hado Reading" offers the extraordinary ability to understand a book's content in just one second. Anyone can achieve
+        this skill by starting their training with the Heguru program at an early age. Once you master "Hado Reading," you
+        will be challenged to read 10,000 books in a month. Successfully reaching this goal grants you membership in the
+        prestigious "Ichimankai."<br />
+        At Heguru, our mission is to awaken and nurture the hidden talents of children, not only in Japan but around the
+        world. We aim to help them flourish with joy and confidence. We invite you to embrace the Heguru program to realize
+        your dreams and lead a fulfilling life.<br />
+      </p>
+
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">“HADO READING” ကို ဖန်တီးသူ</h1>
+      <p class="mb-5">
+        <strong>HEGL (Heguru) CEO Ruiko Henmi</strong>
+        <br />
+        HEGL Heguru ၏ CEO Ruiko Henmi သည် ၁၉၉၇ ခုနှစ်တွင် ကမ္ဘာနှင့်တစ်ဝန်း ပထမဦးဆုံး စာရွက်ကလေးများကို လျင်မြန်စွာလှန်ရုံဖြင့်
+        စာအုပ်ပါအကြောင်းအရာများကို နားလည်သိရှိစေနိုင် သော ထူးခြားဆန်းသစ်သည့် စာဖတ်ခြင်း နည်းလမ်းအသစ် “Hado Reading" ကို ဖန်တီးခဲ့ပါသည်။
+        ဤစာဖတ်နည်းသည် Speed Reading ထက်ပို၍ မြန်ဆန်သည်။ “Hado Reading” ၏ စက္ကန့်ပိုင်း အတွင်း စာအုပ်ပါအကြောင်းအရာများကို
+        နားလည်စေနိုင်သည်မှာ ထူးဆန်းသော်လည်း မည်သူမဆို ငယ်ရွယ်သည့်အချိန်တွင် Heguru ၏ "Hado Reading" ကိုလေ့ကျင့်ခဲ့ပါက ထိုစွမ်းရည်ကို
+        အလွယ်တကူ ပိုင်ဆိုင်နိုင်သည်။ "Hado Reading" ကို ကျွမ်းကျင်သူ ကျောင်းသား၊ ကျောင်းသူ များသည် တစ်လအတွင်း စာအုပ်ပေါင်း
+        တစ်သောင်းကို ဖတ်နိုင်ပါက Heguru Japan ကျောင်း၏ "Ichimankai" အဖွဲ့ဝင်အဖြစ် သတ်မှတ်ခြင်းခံရသည်။
+      </p>
+      <p class="mb-5">
+        Heguru သင်တန်းကျောင်းသည် ကလေးငယ်များ၏ ငုတ်လျှိုးနေသော အရည်အချင်းများကို နိုးထလာစေရန် လှုံ့ဆော်ပေးရန်သာမက
+        ရရှိလာသော အရည်အချင်းများကို အပြည့်အဝ အသုံးချတတ် စေရန် အဓိကထား လမ်းညွှန်သင်ကြားပေးသည်။ ယခုအခါ Heguru
+        သင်တန်းကျောင်းများကို ဂျပန်နိုင်ငံတွင်သာမက ကမ္ဘာနှင့်တစ်ဝန်းတွင် ဖွင့်လှစ်သင်ကြားနေပြီ ဖြစ်သည်။ ကလေးငယ်များ သည်
+        Heguru သင်တန်း၏ လမ်းညွှန်ချက်များဖြင့် မိမိတို့၏ ရည်မှန်းချက် အိပ်မက်များကို ရှာဖွေ တွေ့ရှိ၍
+        ပျော်ရွှင်အောင်မြင်သော အနာဂတ်ကို ပိုင်ဆိုင်ရရှိစေရန်မှာ ကျောင်း၏ အဓိက ရည်ရွယ်ချက်ပင် ဖြစ်သည်။
+      </p>
+
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">Heguru Education: Expanding Globally</h1>
+      <p class="mb-5">
+        Heguru education has evolved into a global network, with over 47 branches in 10 countries, offering our
+        innovative brain development programs for children aged 6 months to 6 years. Originating in Japan, we have
+        expanded to countries such as Singapore, Malaysia, Australia, China, Thailand, and the UAE.<br />
+        Our schools are dedicated to providing a unique blend of Right Brain training, critical thinking, and holistic education.
+        At Heguru, we nurture young minds in a structured and engaging environment that fosters cognitive growth, creativity,
+        and problem-solving skills, helping children unlock their full potential worldwide.<br />
+      </p>
+      <p class="mb-5">
+        Heguru ပညာရေးသည် နိုင်ငံပေါင်း ၁၀နိုင်ငံတွင် ကျောင်းခွဲပေါင်း ၄၇ကျောင်းကျော်ဖြင့်
+        ကမ္ဘာလုံးဆိုင်ရာကွန်ရက်တစ်ခုအဖြစ် ကြီးထွားလာခဲ့ပြီး အသက် 6 လမှ 6 နှစ်အထိ ကလေးများအတွက် ခေတ်မီဆန်းသစ်သော
+        ဦးနှောက်ဖွံ့ဖြိုးမှုအစီအစဉ်များကို သင်ကြားပေးလျက်ရှိပါသည်။ ဂျပန်နိုင်ငံမှအစပြုခဲ့ပြီး စင်ကာပူ၊ မလေးရှား၊
+        သြစတြေးလျ၊ တရုတ်၊ ထိုင်း၊ ယူအေအီးစသည့် နိုင်ငံများသို့ တိုးချဲ့ခဲ့သည်။ Heguru ကျောင်းများသည်
+        ညာဖက်ဦးနှောက်လေ့ကျင့်မှု၊ ဝေဖန်ပိုင်းခြားတွေးခေါ်မှုနှင့် အလုံးစုံပညာရေးတို့ကို ပံ့ပိုးပေးနိုင်ရန် ရည်ရွယ်ပါသည်။
+        Heguru တွင် နုနယ်ငယ်ရွယ်သော ကလေးများအား သိမြင်မှုကြီးထွားမှု၊ တီထွင်ဖန်တီးနိုင်စွမ်းနှင့်
+        ပြဿနာဖြေရှင်းနိုင်စွမ်းတို့ကို မြှင့်တင်ပေးသည့် ဖွဲ့စည်းတည်ဆောက်ပုံနှင့် ဆွဲဆောင်မှုရှိသော ပတ်ဝန်းကျင်တွင်
+        ပြုစုပျိုးထောင်ပေးရန် အာရုံစိုက်လုပ်ဆောင်ပေးပြီး ကမ္ဘာတစ်ဝှမ်းရှိ ကလေးငယ်များအား ၎င်းတို့၏ စွမ်းရည်များကို
+        အကောင်းဆုံးထုတ်ဖော်နိုင်ရန် ကူညီပေးလျက်ရှိပါသည်။
+        <br />
+      </p>
+
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">Interviews with Heguru Yangon Centre Director</h1>
+      <div class="grid grid-cols-2 gap-4 mb-20">
+        <iframe
+          style="width:100%; border-radius: 5px;"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/nEygVPfyNPg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+        <iframe
+          style="width:100%; border-radius: 5px;"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/_IICmVmCbng"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
   </div>
 </Layout>
