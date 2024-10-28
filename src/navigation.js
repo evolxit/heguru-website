@@ -152,6 +152,7 @@ export const authHeaderData = {
     },
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  username: 'Evolx',
 };
 
 export const footerData = {
