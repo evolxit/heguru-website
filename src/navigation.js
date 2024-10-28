@@ -82,6 +82,78 @@ export const headerData = {
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
 
+export const authHeaderData = {
+  links: [
+    {
+      text: 'Home',
+      href: '/',
+    },
+    {
+      text: 'About',
+      href: getPermalink('/about'),
+    },
+    {
+      text: 'Programs',
+
+      links: [
+        {
+          text: 'All Programs',
+          href: getPermalink('/programs'),
+        },
+        {
+          text: 'Infant & Toddler Class',
+          href: getPermalink('/infant'),
+        },
+        {
+          text: 'Preschool I',
+          href: getPermalink('/preschool'),
+        },
+        {
+          text: 'Preschool II',
+          href: getPermalink('/preschool2'),
+        },
+        {
+          text: 'Prenatal Education',
+          href: getPermalink('/prenatal'),
+        },
+        {
+          text: 'Online Program',
+          href: getPermalink('/online'),
+        },
+      ],
+    },
+    {
+      text: 'Testimonials',
+      href: getPermalink('/reviews'),
+    },
+
+    {
+      text: 'FAQ',
+      href: getPermalink('/faq'),
+    },
+    {
+      text: 'Activity',
+      href: getPermalink('/activity'),
+    },
+
+    {
+      text: 'Contact',
+      links: [
+        {
+          text: 'Contact Us',
+          href: getPermalink('/contact'),
+        },
+
+        {
+          text: 'Terms & Conditions',
+          href: getPermalink('/terms'),
+        },
+      ],
+    },
+  ],
+  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+};
+
 export const footerData = {
   links: [
     {
