@@ -126,7 +126,7 @@ const Dashboard = () => {
             <div className="pt-5 px-0">
               <span
                 onClick={handlePassword}
-                className="inline-block bg-primary-400 px-4 py-2 border border-gray-200 rounded-md cursor-pointer hover:bg-primary-700 hover:text-white"
+                className="inline-block px-5 py-2 bg-primary-500 rounded text-white text-sm font-semibold hover:bg-primary-700 cursor-pointer"
               >
                 View Resource
               </span>
