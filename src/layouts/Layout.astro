@@ -3,6 +3,8 @@ import '~/assets/styles/tailwind.css';
 
 import { I18N } from 'astrowind:config';
 
+// import { RecoilRoot } from 'recoil';
+import { ViewTransitions } from 'astro:transitions';
 import Analytics from '~/components/common/Analytics.astro';
 import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
@@ -11,12 +13,6 @@ import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification from '~/components/common/SiteVerification.astro';
 import CustomStyles from '~/components/CustomStyles.astro';
 import Favicons from '~/components/Favicons.astro';
-
-// Comment the line below to disable View Transitions
-import { ViewTransitions } from 'astro:transitions';
-
-// import Header from '~/components/widgets/Header.astro';
-// import { headerData } from '~/navigation';
 import type { MetaData as MetaDataType } from '~/types';
 
 export interface Props {
@@ -38,14 +34,14 @@ const { language, textDirection } = I18N;
     <SiteVerification />
     <Analytics />
 
-    <!-- Comment the line below to disable View Transitions -->
     <ViewTransitions fallback="swap" />
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
   </head>
 
   <body class="antialiased text-default tracking-tight">
+    <!-- <RecoilRoot client:only="react"> -->
     <slot />
-
+    <!-- </RecoilRoot> -->
     <BasicScripts />
 
     <style is:global>

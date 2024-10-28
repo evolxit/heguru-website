@@ -1,0 +1,19 @@
+---
+// import { RecoilRoot } from 'recoil';
+import LoginForm from '~/components/functional/LoginForm';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Login',
+};
+---
+
+<Layout metadata={metadata}>
+  <div class="my-20 mt-32">
+    <div class="w-full dark:bg-gray-950 xl:w-9/12 xl:mx-auto">
+      <!-- <RecoilRoot client:only="react"> -->
+      <LoginForm client:only="react" />
+      <!-- </RecoilRoot> -->
+    </div>
+  </div>
+</Layout>

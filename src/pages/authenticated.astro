@@ -1,0 +1,21 @@
+---
+// import { RecoilRoot } from 'recoil';
+import Dashboard from '~/components/functional/Dashboard';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Authenticated',
+};
+---
+
+<Layout metadata={metadata}>
+  <div class="my-20 mt-32">
+    <div class="lg:w-9/12 mx-auto mb-10 mt-20">
+      <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 pt-10">Heguru Member</h3>
+      <p class="text-center text-gray-400 text-sm">Welcome from member dashboard!</p>
+    </div>
+    <!-- <RecoilRoot client:only="react"> -->
+    <Dashboard client:only="react" />
+    <!-- </RecoilRoot> -->
+  </div>
+</Layout>

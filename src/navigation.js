@@ -1,5 +1,7 @@
 import { getPermalink } from './utils/permalinks';
 
+// const token = window.localStorage.getItem('token');
+
 export const headerData = {
   links: [
     {
@@ -19,12 +21,24 @@ export const headerData = {
           href: getPermalink('/programs'),
         },
         {
-          text: 'School Calendar',
-          href: '#',
+          text: 'Infant & Toddler Class',
+          href: getPermalink('/infant'),
         },
         {
-          text: 'Schedule PIS',
-          href: '#',
+          text: 'Preschool I',
+          href: getPermalink('/preschool'),
+        },
+        {
+          text: 'Preschool II',
+          href: getPermalink('/preschool2'),
+        },
+        {
+          text: 'Prenatal Education',
+          href: getPermalink('/prenatal'),
+        },
+        {
+          text: 'Online Program',
+          href: getPermalink('/online'),
         },
       ],
     },
@@ -46,13 +60,18 @@ export const headerData = {
       text: 'Contact',
       links: [
         {
-          text: 'Contact Us',
-          href: getPermalink('/contact'),
-        },
-        {
           text: 'Register',
           href: getPermalink('/register'),
         },
+        {
+          text: 'Login',
+          href: getPermalink('/login'),
+        },
+        {
+          text: 'Contact Us',
+          href: getPermalink('/contact'),
+        },
+
         {
           text: 'Terms & Conditions',
           href: getPermalink('/terms'),

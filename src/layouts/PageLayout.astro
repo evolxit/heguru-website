@@ -11,6 +11,8 @@ export interface Props {
   metadata?: MetaData;
 }
 
+const { pathname } = Astro.url;
+
 const { metadata } = Astro.props;
 ---
 
@@ -106,7 +108,8 @@ const { metadata } = Astro.props;
 
       <img src="/header-top-shape.png" alt="" />
     </div>
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+
+    {pathname !== '/login' ? <Header {...headerData} isSticky showRssFeed showToggleTheme /> : ''}
   </div>
   <main>
     <slot />
