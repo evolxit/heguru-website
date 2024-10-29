@@ -193,17 +193,17 @@ export const footerData = {
     {
       ariaLabel: 'Instagram',
       icon: 'tabler:brand-instagram',
-      href: 'https://www.instagram.com/heguru_education_singapore?igsh=aWkwcXZoMDU3ajBp',
+      href: 'https://www.instagram.com/heguru_myanmar/?hl=en',
     },
     {
-      ariaLabel: 'Twitter',
-      icon: 'tabler:brand-twitter',
-      href: 'https://www.facebook.com/Heguruyangoncentre?mibextid=LQQJ4d',
+      ariaLabel: 'TikTok',
+      icon: 'tabler:brand-tiktok',
+      href: 'https://www.tiktok.com/@hegurumyanmar?_t=8q4INWfxSsM&_r=1',
     },
     {
       ariaLabel: 'Youtube',
       icon: 'tabler:brand-youtube',
-      href: 'https://www.instagram.com/heguru_education_singapore?igsh=aWkwcXZoMDU3ajBp',
+      href: 'https://www.youtube.com/channel/UCcPqO_fEbngScYJrJpRtWRw',
     },
   ],
   footNote: '',
