@@ -1,4 +1,5 @@
 ---
+import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -7,15 +8,11 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
   <div class="lg:w-9/12 mx-auto">
-    <div class="lg:w-9/12 mx-auto mt-20">
-      <h3 class="text-center font-bold text-3xl text-primary-500 pt-10">About Us</h3>
-      <!-- <p class="text-center text-gray-400 text-sm">Photos of our Activities!</p> -->
-    </div>
+    <HeroText isMain="main" tagline="About Us" title="About Heguru Education" subtitle="" />
 
-    <div class="mt-10">
-      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">Education Philosophy</h1>
+    <div class="">
+      <h1 class="font-bold text-blue-600 text-xl my-3">Education Philosophy</h1>
       <p class="mb-5">
         We at Heguru aim to nurture people who can make meaningful contributions to the happiness and evolutionary
         development of human beings in the world. <br />We strive to help people develop the ability to judge matters

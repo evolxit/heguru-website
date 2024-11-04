@@ -1,9 +1,13 @@
 ---
-import { SITE } from 'astrowind:config';
+// import { SITE } from 'astrowind:config';
+
+import logo from '~/assets/images/logo.png';
 ---
 
 <span
   class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
 >
-  🚀 {SITE?.name}
+  <!-- 🚀 {SITE?.name} -->
+  <!-- <Img src={logo} alt="App Store Image" class:list={'w-20 rounded-lg inline'} /> -->
+  <img src={logo.src} class="object-contain w-[60px]" />
 </span>
