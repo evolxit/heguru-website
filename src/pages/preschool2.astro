@@ -1,4 +1,5 @@
 ---
+import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -8,90 +9,84 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <div class="lg:w-9/12 mx-auto mb-10 mt-24">
-    <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 pt-10">Preschool II</h3>
-    <p class="text-center text-gray-600 text-sm">မူကြို</p>
+  <HeroText isMain="main" tagline="Programs" title="Preschool II" subtitle="မူကြို" />
+
+  <div class="w-full lg:w-9/12 mx-auto px-8 lg:px-0">
+    <div class="text-box text-sm text-gray-600 text-justify px-5 mb-10">
+      <p>
+        Left-brain development begins in collaboration with right-brain development.<br />
+        ဘက်ဦးနှောက်ဖွံဖြိုးမှုနှင့် ညာဖက်ဦးနှောက်ဖွံ့ဖြိုးမှုကို ပူးပေါင်းသင်ကြားခြင်းများ စတင်သည်။<br /><br />
+
+        As right-brain development progresses, an additional 84 programs are introduced to enhance left-brain thinking
+        power.<br />
+        ညာဖက်ဦးနှောက် ဖွံ့ဖြိုးတိုးတက်ပြီး ဖြစ်သည့်အလျှောက် ဘယ်ဖက်ဦးနှောက်၏ တွေးခေါ်နိုင်စွမ်းကို လေ့ကျင့်ပေးရန် သင်ကြားရေးဆိုင်ရာ
+        နည်းလမ်း ၈၄ ခု ထပ်မံ ရေးဆွဲထားသည်။
+      </p>
+
+      <h1 class="font-bold mt-10 mb-5 text-blue-600">Preschool I</h1>
+
+      <p>
+        <strong>Duration:</strong> 90 minutes
+        <br />
+        <strong>Child's Age:</strong> 5 to 6 years old
+        <br />
+        <strong>Number of Classes:</strong> 42 per year <br />
+        <br />
+
+        ကြာချိန်- ၉ဝ မိနစ်<br />
+        ကလေးအသက် ၅-၆ နှစ်<br />
+        အတန်းအရေအတွက် တစ်နှစ်လျှင် ၄၂ တန်း
+      </p>
+
+      <h1 class="font-bold mt-10 mb-5 text-blue-600">Highlights of This Program:</h1>
+
+      <ul class="list-disc ml-5">
+        <li>
+          <strong>Enhanced Brain Capacity:</strong> Focus on enlarging brain capacity and fostering connections between the
+          left and right brains.
+        </li>
+        <li>
+          <strong>High-Speed Processing Skills:</strong> Nurturing the ability to process information quickly.
+        </li>
+        <li>
+          <strong>Expression and Comprehension:</strong> Developing the power of expression and comprehension skills.
+        </li>
+        <li>
+          <strong>Cooperation and Interaction:</strong> Promoting teamwork through group interaction activities.
+        </li>
+        <li>
+          <strong>Balanced Development:</strong> Furthering left-brain development while enhancing right-brain abilities
+          using specially prepared worksheets.
+        </li>
+      </ul>
+
+      <h1 class="font-bold mt-10 mb-5 text-blue-600">သင်ကြားရေး၏ အဓိကအားသာချက်</h1>
+      ၁. ဦးနှောက်၏ စွမ်းဆောင်ရည်ကို မြှင့်တင်ပေးခြင်းနှင့် ညာဖက်ဦးနှောက်နှင့် ဘယ်ဖက်ဦးနောက် ဆက်သွယ်လုပ်ဆောင်မှု အောင်မြင်စေသည်။<br
+      /><br />
+
+      ၂. အလုပ်များကိုလျင်မြန်ဆောင်ရွက်နိုင်သောအရည်အသွေး များ ပျိုးထောင်ပေးသည်။<br /><br />
+
+      ၃. နားလည်နိုင်စွမ်းနှင့် ဖော်ပြနိုင်စွမ်းများကို ပျိုးထောင်ပေးသည်။ <br /><br />
+
+      ၄. အဖွဲ့လိုက် လုပ်ဆောင်ရသော သင်ကြားရေးပုံစံများကြောင့် ပူးပေါင်းဆောင်ရွက်နိုင်စွမ်း တိုးတက်လာသည်။ <br /><br />
+
+      ၅. ပြင်ဆင်ထားသော Worksheet များကို အသုံးပြုသင်ကြား၍ ညာဖက်ဦးနှောက်စွမ်းရည် မြှင့်တင်ပေးခြင်းအပြင်
+      ဘယ်ဖက်ဦးနှောက်ကိုလည်း ဖွံဖြိုးမှုများ ထပ်မံဖြစ်စေသည်။
+    </div>
   </div>
 
-  <!-- component -->
-  <div class="w-full">
-    <div class="w-full lg:w-9/12 mx-auto">
-      <div class="text-box text-sm text-gray-600 text-justify px-5 mb-10">
-        <p>
-          Left-brain development begins in collaboration with right-brain development.<br />
-          ဘက်ဦးနှောက်ဖွံဖြိုးမှုနှင့် ညာဖက်ဦးနှောက်ဖွံ့ဖြိုးမှုကို ပူးပေါင်းသင်ကြားခြင်းများ စတင်သည်။<br /><br />
-
-          As right-brain development progresses, an additional 84 programs are introduced to enhance left-brain thinking
-          power.<br />
-          ညာဖက်ဦးနှောက် ဖွံ့ဖြိုးတိုးတက်ပြီး ဖြစ်သည့်အလျှောက် ဘယ်ဖက်ဦးနှောက်၏ တွေးခေါ်နိုင်စွမ်းကို လေ့ကျင့်ပေးရန် သင်ကြားရေးဆိုင်ရာ
-          နည်းလမ်း ၈၄ ခု ထပ်မံ ရေးဆွဲထားသည်။
-        </p>
-
-        <h1 class="font-bold mt-10 mb-5 text-blue-600">Preschool I</h1>
-
-        <p>
-          <strong>Duration:</strong> 90 minutes
-          <br />
-          <strong>Child's Age:</strong> 5 to 6 years old
-          <br />
-          <strong>Number of Classes:</strong> 42 per year <br />
-          <br />
-
-          ကြာချိန်- ၉ဝ မိနစ်<br />
-          ကလေးအသက် ၅-၆ နှစ်<br />
-          အတန်းအရေအတွက် တစ်နှစ်လျှင် ၄၂ တန်း
-        </p>
-
-        <h1 class="font-bold mt-10 mb-5 text-blue-600">Highlights of This Program:</h1>
-
-        <ul class="list-disc ml-5">
-          <li>
-            <strong>Enhanced Brain Capacity:</strong> Focus on enlarging brain capacity and fostering connections between
-            the left and right brains.
-          </li>
-          <li>
-            <strong>High-Speed Processing Skills:</strong> Nurturing the ability to process information quickly.
-          </li>
-          <li>
-            <strong>Expression and Comprehension:</strong> Developing the power of expression and comprehension skills.
-          </li>
-          <li>
-            <strong>Cooperation and Interaction:</strong> Promoting teamwork through group interaction activities.
-          </li>
-          <li>
-            <strong>Balanced Development:</strong> Furthering left-brain development while enhancing right-brain abilities
-            using specially prepared worksheets.
-          </li>
-        </ul>
-
-        <h1 class="font-bold mt-10 mb-5 text-blue-600">သင်ကြားရေး၏ အဓိကအားသာချက်</h1>
-        ၁. ဦးနှောက်၏ စွမ်းဆောင်ရည်ကို မြှင့်တင်ပေးခြင်းနှင့် ညာဖက်ဦးနှောက်နှင့် ဘယ်ဖက်ဦးနောက် ဆက်သွယ်လုပ်ဆောင်မှု အောင်မြင်စေသည်။<br
-        /><br />
-
-        ၂. အလုပ်များကိုလျင်မြန်ဆောင်ရွက်နိုင်သောအရည်အသွေး များ ပျိုးထောင်ပေးသည်။<br /><br />
-
-        ၃. နားလည်နိုင်စွမ်းနှင့် ဖော်ပြနိုင်စွမ်းများကို ပျိုးထောင်ပေးသည်။ <br /><br />
-
-        ၄. အဖွဲ့လိုက် လုပ်ဆောင်ရသော သင်ကြားရေးပုံစံများကြောင့် ပူးပေါင်းဆောင်ရွက်နိုင်စွမ်း တိုးတက်လာသည်။ <br /><br />
-
-        ၅. ပြင်ဆင်ထားသော Worksheet များကို အသုံးပြုသင်ကြား၍ ညာဖက်ဦးနှောက်စွမ်းရည် မြှင့်တင်ပေးခြင်းအပြင်
-        ဘယ်ဖက်ဦးနှောက်ကိုလည်း ဖွံဖြိုးမှုများ ထပ်မံဖြစ်စေသည်။
-      </div>
-    </div>
-
-    <style>
-      .parent-div:hover .img-hover {
-        transform: scale(1.3);
-      }
-      /* .img-hover {
+  <style>
+    .parent-div:hover .img-hover {
+      transform: scale(1.3);
+    }
+    /* .img-hover {
                     transform .2s;
                 } */
-      .parent-div {
-        /* width: 320px; */
-        /* height: 390px; */
-        overflow: hidden;
-        position: relative;
-      }
-    </style>
-  </div>
+    .parent-div {
+      /* width: 320px; */
+      /* height: 390px; */
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
 </Layout>

@@ -10,84 +10,82 @@ const metadata = {
 <Layout metadata={metadata}>
   <HeroText isMain="main" tagline="Activities" title="Our Activities" subtitle="Photos and videos of our Activities!" />
 
-  <div class="container mx-auto p-4">
+  <div class="lg:w-9/12 mx-auto px-8 lg:px-0 py-4">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <div>
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img1.jpg" alt="" />
           <span>Title 1</span>
         </div>
 
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img5.jpg" alt="" />
           <span>Title 2</span>
         </div>
 
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img8.jpg" alt="" />
           <span>Title 3</span>
         </div>
       </div>
       <div>
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img12.jpg" alt="" />
           <span>Title 1</span>
         </div>
 
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img15.jpg" alt="" />
           <span>Title 2</span>
         </div>
 
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img13.jpg" alt="" />
           <span>Title 3</span>
         </div>
       </div>
       <div>
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img3.jpg" alt="" />
           <span>Title 1</span>
         </div>
 
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img6.jpg" alt="" />
           <span>Title 2</span>
         </div>
 
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img15.jpg" alt="" />
           <span>Title 3</span>
         </div>
       </div>
       <div>
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img11.jpg" alt="" />
           <span>Title 1</span>
         </div>
 
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img10.jpg" alt="" />
           <span>Title 2</span>
         </div>
 
-        <div class="mx-5">
+        <div class="">
           <img class="h-auto max-w-full rounded-lg" src="/img5.jpg" alt="" />
           <span>Title 3</span>
         </div>
       </div>
     </div>
 
-    <div class="lg:w-9/12 mx-auto my-10">
-      <!-- <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 pt-10">Our Activities</h3> -->
+    <div class="my-10">
       <p class="text-center text-gray-400 text-sm">Videos of our Activities!</p>
     </div>
-    <!-- <HeroText isMain="main"tagline="" title="Our Activities" subtitle="Videos of our Activities!" /> -->
 
-    <!-- <div class="lg:w-9/12 md:w-full mx-auto grid lg:grid-cols-4 md:grid-cols-4 gap-2 gap-y-10 place-items-center"> -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
+    <div class="grid grid:cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
       <iframe
-        style="width:90%; border-radius: 5px;"
+        style=" border-radius: 5px;"
+        class="w-full"
         height="315"
         src="https://www.youtube-nocookie.com/embed/fzfa8G9kFr4"
         title="YouTube video player"
@@ -97,7 +95,8 @@ const metadata = {
       >
       </iframe>
       <iframe
-        style="width:90%; border-radius: 5px;"
+        style=" border-radius: 5px;"
+        class="w-full"
         height="315"
         src="https://www.youtube-nocookie.com/embed/21hmP6q10wQ"
         title="YouTube video player"
@@ -107,7 +106,8 @@ const metadata = {
       >
       </iframe>
       <iframe
-        style="width:90%; border-radius: 5px;"
+        style=" border-radius: 5px;"
+        class="w-full"
         height="315"
         src="https://www.youtube-nocookie.com/embed/uAVztJem0pc"
         title="YouTube video player"
@@ -117,7 +117,8 @@ const metadata = {
       >
       </iframe>
       <iframe
-        style="width:90%; border-radius: 5px;"
+        style=" border-radius: 5px;"
+        class="w-full"
         height="315"
         src="https://www.youtube-nocookie.com/embed/mQtOYzi-eEU"
         title="YouTube video player"
@@ -127,71 +128,5 @@ const metadata = {
       >
       </iframe>
     </div>
-    <!-- <div class="my-20 grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div>
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img1.jpg" alt="" />
-          <span>Title 1</span>
-        </div>
-
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img5.jpg" alt="" />
-          <span>Title 2</span>
-        </div>
-
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img8.jpg" alt="" />
-          <span>Title 3</span>
-        </div>
-      </div>
-      <div>
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img12.jpg" alt="" />
-          <span>Title 1</span>
-        </div>
-
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img15.jpg" alt="" />
-          <span>Title 2</span>
-        </div>
-
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img13.jpg" alt="" />
-          <span>Title 3</span>
-        </div>
-      </div>
-      <div>
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img3.jpg" alt="" />
-          <span>Title 1</span>
-        </div>
-
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img6.jpg" alt="" />
-          <span>Title 2</span>
-        </div>
-
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img15.jpg" alt="" />
-          <span>Title 3</span>
-        </div>
-      </div>
-      <div>
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img11.jpg" alt="" />
-          <span>Title 1</span>
-        </div>
-
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img10.jpg" alt="" />
-          <span>Title 2</span>
-        </div>
-
-        <div class="mx-5">
-          <img class="h-auto max-w-full rounded-lg" src="/img5.jpg" alt="" />
-          <span>Title 3</span>
-        </div>
-      </div>
-    </div> -->
   </div>
 </Layout>
