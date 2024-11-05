@@ -3,14 +3,58 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Img from '~/components/common/Img.astro';
 import Content from '~/components/widgets/Content.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import FloatImg from '~/components/common/FloatImg.astro';
 import FloatIcon from '~/components/common/FloatIcon.astro';
+// import ApiService from '~/services/ApiService';
+import CategoryList from '~/components/functional/CategoryList';
+// import HeroText from '~/components/widgets/HeroText.astro';
 
 const metadata = {
   title: 'HGU',
   ignoreTitleTemplate: true,
 };
+
+// const categoryData = await ApiService.getCategories();
+// const categories = categoryData.list[0].children;
+// console.log('cat', categories);
+
+const categories = [
+  {
+    id: 1,
+    name: 'Category 1',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
+    image: null,
+  },
+  {
+    id: 2,
+    name: 'Category 1',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
+    image: null,
+  },
+  {
+    id: 3,
+    name: 'Category 1',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
+    image: null,
+  },
+  {
+    id: 4,
+    name: 'Category 1',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
+    image: null,
+  },
+  {
+    id: 5,
+    name: 'Category 1',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
+    image: null,
+  },
+];
 
 const bannerKid = '~/assets/images/banner-kid-1.png';
 const bottomShape = '~/assets/images/bottom.png';
@@ -123,7 +167,7 @@ const balloonsImg = '~/assets/images/balloons.png';
     <div class="slider xl:w-10/12 mx-auto py-10">
       <div class="lg:w-9/12 mx-auto mb-10">
         <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 main-heading-font">Our Programs</h3>
-        <p class="text-center text-gray-400 text-sm">
+        <p class="text-center text-gray-400 text-base">
           Heguru Classes for Children provide courses for training the Whole Brain, which are divided into various
           programs by age group; Prenatal Education (for pregnant women), Infant & Toddler Classes and Preschool
           Classes.
@@ -345,47 +389,14 @@ const balloonsImg = '~/assets/images/balloons.png';
   </div>
 
   <div class="w-full bg-gray-800 my-5 py-20 pb-32 relative">
-    <Features2
+    <!-- <HeroText
+      tagline="Products"
       title="Our Products"
       subtitle="See the difference! The features of Heguru’s Classes for Children"
-      tagline=""
-      items={[
-        {
-          title: 'Puzzles',
-          description:
-            'Nine Puzzle (for all levels)<br/> Iroita Puzzle (for all levels)<br/> Phoenix Puzzle (for Preschool)<br/> Plate Puzzle (for Preschool)<br/> Magic Blocks (for Preschool) ',
-          icon: 'flat-color-icons:template',
-        },
-        {
-          title: 'Flash Cards & Worksheet',
-          description:
-            'Right-Brain Memory Cards (for all levels)<br/> PEG Memory Cards (for all levels)<br/> World Maps, Flags and Continents Flashcards (for all levels)<br/> General Knowledge Flashcards (for all levels)<br/> S1 Worksheet-Numbers & Intellectual (12 Volumes, 48 books) (for 3 years old) ',
-          icon: 'flat-color-icons:template',
-        },
-        {
-          title: 'Books',
-          description:
-            'Fifty Wisdom Teachings for Life <br/> Hado Reading <br/> 8 Points to bring out the best in your children <br/> Iroita Puzzles Basic 1 (for Infant and Toddler) <br/> Iroita Puzzles Basic 2 (for Infant and Toddler) <br/> Iroita Puzzles Advance 1 (for Preschool) <br/> Iroita Puzzles Advance 2 (for Preschool) <br/> Tangram Puzzles Basic 1 (for Infant and Toddler) <br/> Tangram Puzzles Basic 2 (for Infant and Toddler) <br/> Tangram Puzzles Advance 1 (for Preschool) <br/> Tangram Puzzles Advance 2 (for Preschool) <br/> ',
-          icon: 'flat-color-icons:currency-exchange',
-        },
-        {
-          title: 'Wall Charts',
-          description:
-            'Wall Chart - English Alphabets (for Infant and Toddler)<br/> Wall Chart - Myanmar Alphabets (for Infant and Toddler)<br/> Wall Chart - Numbers (for Infant and Toddler)<br/> Wall Chart - Colours (for Infant and Toddler)<br/> Wall Chart - Shapes (for Infant and Toddler)<br/> Wall Chart - Farm Animals (for Infant and Toddler)<br/> Wall Chart - Wild Animals (for Infant and Toddler)<br/> Wall Chart - Domesticated Animals (for Infant and Toddler)<br/> Wall Chart - Time (for Preschool)<br/> Wall Chart - Currency (for Preschool) ',
-          icon: 'flat-color-icons:document',
-        },
-        {
-          title: 'Others',
-          description:
-            'Sakura Coupy Triangular Crayons (Japan)<br/> OMNI Triangular Crayons (Singapore)<br/> Abacus (for Infant and Toddler)<br/> Time Clock (Small) (for Infant and Toddler) ',
-          icon: 'flat-color-icons:document',
-        },
-      ]}
-    >
-      <Fragment slot="bg">
-        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-      </Fragment>
-    </Features2>
+    /> -->
+    <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 main-heading-font">Our Products</h3>
+    <p class="text-center text-gray-200 text-base mb-20">See what parents are saying about Heguru.</p>
+    <CategoryList categories={categories} client:only="react" />
 
     <FloatImg src={bottomShape} alt="App Store Image" class:list={'absolute -bottom-1 w-full left-0 z-10'} />
 
@@ -515,7 +526,7 @@ const balloonsImg = '~/assets/images/balloons.png';
         <h3 class="ml-10 text-xl font-bold tracking-tight dark:text-white sm:text-2xl main-heading-font">
           Mission & Vision
         </h3>
-        <p class="ml-10 mt-10 md:text-sm text-gray-500">
+        <p class="ml-10 mt-10 text-base text-gray-500">
           We at Heguru aim to nurture people who can make meaningful contributions to the happiness and evolutionary
           development of human beings in the world.
         </p>
@@ -561,12 +572,15 @@ const balloonsImg = '~/assets/images/balloons.png';
 
     <div class="lg:w-9/12 mx-auto mb-10">
       <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 main-heading-font">Words from Parents</h3>
-      <p class="text-center text-gray-400 text-sm">See what parents are saying about Heguru.</p>
+      <p class="text-center text-gray-400 text-base">See what parents are saying about Heguru.</p>
     </div>
 
-    <div class="xl:w-9/12 md:w-full mx-auto grid xl:grid-cols-3 md:grid-cols-3 gap-2 gap-y-10 place-items-center">
+    <div
+      class="xl:w-10/12 md:w-full px-8 xl:px-0 mx-auto grid xl:grid-cols-3 md:grid-cols-3 gap-2 gap-y-10 place-items-center"
+    >
       <iframe
-        style="width:90%; border-radius: 5px;"
+        style=" border-radius: 5px;"
+        class="w-full"
         height="315"
         src="https://www.youtube-nocookie.com/embed/21hmP6q10wQ"
         title="YouTube video player"
@@ -576,7 +590,8 @@ const balloonsImg = '~/assets/images/balloons.png';
       >
       </iframe>
       <iframe
-        style="width:90%; border-radius: 5px;"
+        style=" border-radius: 5px;"
+        class="w-full"
         height="315"
         src="https://www.youtube-nocookie.com/embed/uAVztJem0pc"
         title="YouTube video player"
@@ -586,7 +601,8 @@ const balloonsImg = '~/assets/images/balloons.png';
       >
       </iframe>
       <iframe
-        style="width:90%; border-radius: 5px;"
+        style=" border-radius: 5px;"
+        class="w-full"
         height="315"
         src="https://www.youtube-nocookie.com/embed/mQtOYzi-eEU"
         title="YouTube video player"
@@ -614,7 +630,7 @@ const balloonsImg = '~/assets/images/balloons.png';
 
     <div class="lg:w-9/12 mx-auto">
       <h3 class="text-center font-bold text-3xl text-primary-500 main-heading-font">Contact Us</h3>
-      <p class="text-center text-gray-400 text-sm">We’re here to help and answer any question you might have.</p>
+      <p class="text-center text-gray-400 text-base">We’re here to help and answer any question you might have.</p>
 
       <div class="w-full flex justify-center mt-10">
         <a href="/contact"
