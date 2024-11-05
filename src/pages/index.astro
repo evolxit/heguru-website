@@ -5,56 +5,55 @@ import Img from '~/components/common/Img.astro';
 import Content from '~/components/widgets/Content.astro';
 import FloatImg from '~/components/common/FloatImg.astro';
 import FloatIcon from '~/components/common/FloatIcon.astro';
-// import ApiService from '~/services/ApiService';
+import ApiService from '~/services/ApiService';
 import CategoryList from '~/components/functional/CategoryList';
-// import HeroText from '~/components/widgets/HeroText.astro';
 
 const metadata = {
   title: 'HGU',
   ignoreTitleTemplate: true,
 };
 
-// const categoryData = await ApiService.getCategories();
-// const categories = categoryData.list[0].children;
-// console.log('cat', categories);
+const categoryData = await ApiService.getCategories();
+const categories = categoryData.list[0].children;
+console.log('cat', categories);
 
-const categories = [
-  {
-    id: 1,
-    name: 'Category 1',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
-    image: null,
-  },
-  {
-    id: 2,
-    name: 'Category 1',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
-    image: null,
-  },
-  {
-    id: 3,
-    name: 'Category 1',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
-    image: null,
-  },
-  {
-    id: 4,
-    name: 'Category 1',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
-    image: null,
-  },
-  {
-    id: 5,
-    name: 'Category 1',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
-    image: null,
-  },
-];
+// const categories = [
+//   {
+//     id: 1,
+//     name: 'Category 1',
+//     description:
+//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
+//     image: null,
+//   },
+//   {
+//     id: 2,
+//     name: 'Category 1',
+//     description:
+//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
+//     image: null,
+//   },
+//   {
+//     id: 3,
+//     name: 'Category 1',
+//     description:
+//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
+//     image: null,
+//   },
+//   {
+//     id: 4,
+//     name: 'Category 1',
+//     description:
+//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
+//     image: null,
+//   },
+//   {
+//     id: 5,
+//     name: 'Category 1',
+//     description:
+//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque aperiam ratione dolorum praesentium rerum officiis esse, dicta eligendi accusamus recusandae ut reiciendis beatae explicabo numquam nisi facilis saepe sapiente?',
+//     image: null,
+//   },
+// ];
 
 const bannerKid = '~/assets/images/banner-kid-1.png';
 const bottomShape = '~/assets/images/bottom.png';
