@@ -1,17 +1,23 @@
-const Product = ({ product }) => {
+const Product = ({ item, type }) => {
   return (
     <div className="">
-      {product && (
-        <div className="w-full p-5 text-xs bg-gray-50 rounded-md">
-          <a href="/product-detail" className="relative">
-            <img
-              className="rounded-md w-full"
-              src={product.image ? product.image : 'https://placehold.jp/400x400.png'}
-              alt=""
-            />
-          </a>
-          <h2 className="text-third-500 text-sm my-5 font-semibold hover:text-third-400">{product.name}</h2>
-          <p className="text-gray-400">{product.description}</p>
+      {item && (
+        <div key={item.id} className="rounded-lg bg-gray-100 p-3 shadow duration-150 hover:scale-105 hover:shadow-md">
+          <img
+            className="w-full rounded-lg object-cover object-center"
+            src={item.image ? item.image : 'https://placehold.jp/400x400.png'}
+            alt=""
+          />
+          <p className="my-4 font-bold text-gray-500 main-heading-font">{item.name}</p>
+
+          {type == 'category' && (
+            <a
+              href="/products"
+              class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
+            >
+              See More
+            </a>
+          )}
         </div>
       )}
     </div>
