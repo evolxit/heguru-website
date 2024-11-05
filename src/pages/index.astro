@@ -8,6 +8,7 @@ import FloatIcon from '~/components/common/FloatIcon.astro';
 import ApiService from '~/services/ApiService';
 import CategoryList from '~/components/functional/CategoryList';
 import HeroText from '~/components/widgets/HeroText.astro';
+import DefaultBtn from '~/components/ui/DefaultBtn.astro';
 
 const metadata = {
   title: 'HGU',
@@ -150,7 +151,7 @@ const balloonsImg = '~/assets/images/balloons.png';
             <a
               href="/register"
               target="_blank"
-              class="block sm:inline-block text-center px-3 py-2.5 rounded bg-primary-500 text-white drop-shadow-lg font-bold text-sm mt-2 lg:mt-6 mx-auto cursor-pointer hover:bg-primary-600"
+              class="tag-line-font tracking-wider block sm:inline-block text-center px-3 py-2.5 rounded bg-primary-500 text-white drop-shadow-lg font-bold text-sm mt-2 lg:mt-6 mx-auto cursor-pointer hover:bg-primary-600"
               ><span style="text-shadow: 1px 1px rgb(214, 140, 1);">Enroll Now</span></a
             >
           </div>
@@ -195,11 +196,8 @@ const balloonsImg = '~/assets/images/balloons.png';
                 development.<br />
                 မိဘများသည် မိိမ၏ကလေးများနှင့် စိတ်ပိုင်းဆိုင်ရာ ဆက်သွယ်မှုများ ပြုလုပ်ခြင်းဖြင့် ...
               </span>
-              <a
-                href="/infant"
-                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
-                >Read More...</a
-              >
+
+              <DefaultBtn link="/infant" text="Read More..." />
             </div>
           </div>
         </div>
@@ -217,11 +215,8 @@ const balloonsImg = '~/assets/images/balloons.png';
                 >Left-brain development begins in collaboration with right-brain development.<br />
                 ဘက်ဦးနှောက်ဖွံဖြိုးမှုနှင့် ညာဖက်ဦးနှောက်ဖွံ့ဖြိုးမှုကို ပူးပေါင်းသင်ကြားခြင်းများ စတင်သည်။</span
               >
-              <a
-                href="/preschool"
-                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
-                >Read More...</a
-              >
+
+              <DefaultBtn link="/preschool" text="Read More..." />
             </div>
           </div>
         </div>
@@ -239,11 +234,8 @@ const balloonsImg = '~/assets/images/balloons.png';
                 >Left-brain development begins in collaboration with right-brain development.<br />
                 ဘက်ဦးနှောက်ဖွံဖြိုးမှုနှင့် ညာဖက်ဦးနှောက်ဖွံ့ဖြိုးမှုကို ပူးပေါင်းသင်ကြားခြင်းများ စတင်သည်။</span
               >
-              <a
-                href="/preschool2"
-                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
-                >Read More...</a
-              >
+
+              <DefaultBtn link="/preschool2" text="Read More..." />
             </div>
           </div>
         </div>
@@ -267,11 +259,8 @@ const balloonsImg = '~/assets/images/balloons.png';
                 မိမိသန္ဓေသားနှင့် မိမိ၏ကြား ဆက်သွယ်ခြင်းသည် မိခင်နှင့် ကလေးကြား လေးနက်သောချစ်ခြင်းနှင့် သံယောဇဉ်ကို ပိုမို
                 ခိုင်မာစေပါသည်။</span
               >
-              <a
-                href="/prenatal"
-                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
-                >Read More...</a
-              >
+
+              <DefaultBtn link="/prenatal" text="Read More..." />
             </div>
           </div>
         </div>
@@ -294,11 +283,8 @@ const balloonsImg = '~/assets/images/balloons.png';
                 >At Heguru, we believe that every child has limitless potential. Our online classes bring the renowned
                 Heguru Method directly to your home, offering engaging and effective brain development training.</span
               >
-              <a
-                href="/online"
-                class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
-                >Read More...</a
-              >
+
+              <DefaultBtn link="/online" text="Read More..." />
             </div>
           </div>
         </div>
@@ -531,12 +517,10 @@ const balloonsImg = '~/assets/images/balloons.png';
           We at Heguru aim to nurture people who can make meaningful contributions to the happiness and evolutionary
           development of human beings in the world.
         </p>
-        <a href="/about"
-          ><span
-            class="ml-10 inline-block mt-10 px-5 py-2 bg-primary-500 rounded text-white text-sm font-semibold hover:bg-primary-700"
-            >Read More</span
-          ></a
-        >
+
+        <div class="ml-10 mt-10">
+          <DefaultBtn link="/about" text="Read More..." />
+        </div>
       </Fragment>
     </Content>
   </div>
@@ -640,12 +624,7 @@ const balloonsImg = '~/assets/images/balloons.png';
       <p class="text-center text-gray-400 text-base">We’re here to help and answer any question you might have.</p> -->
 
       <div class="w-full flex justify-center mt-10">
-        <a href="/contact"
-          ><span
-            class="inline-block mx-auto px-5 py-2 bg-primary-500 rounded text-white text-sm font-semibold hover:bg-primary-700"
-            >Contact Us</span
-          ></a
-        >
+        <DefaultBtn link="/contact" text="Contact Us" />
       </div>
     </div>
   </div>

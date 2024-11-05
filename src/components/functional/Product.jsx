@@ -16,7 +16,7 @@ const Product = ({ item, type }) => {
           {type == 'category' && (
             <a
               href="/products"
-              class="text-xs hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
+              class="tag-line-font text-xs tracking-wider hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded px-3 py-2"
             >
               See More
             </a>
