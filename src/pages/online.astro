@@ -1,4 +1,5 @@
 ---
+import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -8,52 +9,46 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <div class="lg:w-9/12 mx-auto mb-10 mt-24">
-    <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 pt-10">Online Program</h3>
-    <p class="text-center text-gray-600 text-sm">
-      Heguru Online Class: Unlock Your Child's Full Potential from Home<br />
-      Heguru အွန်လိုင်း သင်တန်း : နေအိမ်ကနေပဲ သင့်ကလေးငယ်ရဲ့ အလားအလာကောင်းတွေကို ဖွင့်လှစ်ကြိုဆိုလိုက်ပါ
-    </p>
+  <HeroText isMain="main" tagline="Programs" title="Online Program" subtitle="Heguru Online Class" />
+
+  <div class="w-full lg:w-9/12 mx-auto px-8 lg:px-0">
+    <div class="text-box text-sm text-gray-600 text-justify px-5 mb-10">
+      <p class="mb-5 text-gray-600 text-sm">
+        Heguru Online Class: Unlock Your Child's Full Potential from Home<br />
+        Heguru အွန်လိုင်း သင်တန်း : နေအိမ်ကနေပဲ သင့်ကလေးငယ်ရဲ့ အလားအလာကောင်းတွေကို ဖွင့်လှစ်ကြိုဆိုလိုက်ပါ
+      </p>
+      <p class="mb-5">
+        At Heguru, we believe that every child has limitless potential. Our online classes bring the renowned Heguru
+        Method directly to your home, offering engaging and effective brain development training. Tailored for children
+        aged 6 months to 6 years, our program fosters creativity, memory, and problem-solving skills through fun and
+        interactive activities. Guided by experienced instructors, your child will enjoy a world-class learning
+        experience—all from the comfort of home. Join us and embark on an enriching journey with Heguru Online!
+      </p>
+      <p class="mb-5">
+        ကလေးငယ်တိုင်းတွင် အကန့်သတ်မရှိသော အလားအလာကောင်းများရှိကြသည်ဟု Heguru မှ ယုံကြည်ပါသည်။ Heguru
+        အွန်လိုင်းအတန်းများသည် နာမည်ကျော် Heguru Method ကို သင့်နေအိမ်သို့ တိုက်ရိုက်ယူဆောင်လာပေးခြင်းဖြစ်ပြီး
+        ထိရောက်၍စိတ်ဝင်စားစရာကောင်းသော ဦးနှောက်ဖွံ့ဖြိုးရေး လေ့ကျင့်ခန်းများကို သင်ကြားပေးပါသည်။ ၆လမှ ၆နှစ်အရွယ်
+        ကလေးငယ်များအတွက် ရည်ရွယ်ပြင်ဆင်ထားသော Heguru အွန်လိုင်းပရိုဂရမ်သည် တီထွင်ဖန်တီးနိုင်စွမ်း၊ မှတ်ဉာဏ်စွမ်းနှင့်
+        ပြဿနာဖြေရှင်းနိုင်စွမ်းတို့ကို ပျော်ရွှင်စရာကောင်းသော အပြန်အလှန်လှုပ်ရှားဆောင်ရွက်မှုများမှတဆင့်
+        ပြုစုပျိုးထောင်ပေးခြင်းဖြစ်ပါသည်။ အတွေ့အကြုံရင့်ဆရာ၊ဆရာမများ၏လမ်းညွှန်သင်ကြားပေးမှုနှင့် သင့်ကလေးငယ်သည်
+        နေအိမ်မှာပင် သက်တောင့်သက်သာဖြင့် ကမ္ဘာ့အဆင့် သင်ယူမှုအတွေ့အကြုံကို ခံစားရမည်ဖြစ်ပါသည်။ Heguru
+        အွန်လိုင်းပရိုဂရမ်နဲ့အတူ ကောင်းမွန်ကြွယ်ဝသော ခရီးစဉ်ကို စတင်လိုက်ပါ။
+      </p>
+    </div>
   </div>
 
-  <!-- component -->
-  <div class="w-full">
-    <div class="w-full lg:w-9/12 mx-auto">
-      <div class="text-box text-sm text-gray-600 text-justify px-5 mb-10">
-        <p class="mb-5">
-          At Heguru, we believe that every child has limitless potential. Our online classes bring the renowned Heguru
-          Method directly to your home, offering engaging and effective brain development training. Tailored for
-          children aged 6 months to 6 years, our program fosters creativity, memory, and problem-solving skills through
-          fun and interactive activities. Guided by experienced instructors, your child will enjoy a world-class
-          learning experience—all from the comfort of home. Join us and embark on an enriching journey with Heguru
-          Online!
-        </p>
-        <p class="mb-5">
-          ကလေးငယ်တိုင်းတွင် အကန့်သတ်မရှိသော အလားအလာကောင်းများရှိကြသည်ဟု Heguru မှ ယုံကြည်ပါသည်။ Heguru
-          အွန်လိုင်းအတန်းများသည် နာမည်ကျော် Heguru Method ကို သင့်နေအိမ်သို့ တိုက်ရိုက်ယူဆောင်လာပေးခြင်းဖြစ်ပြီး
-          ထိရောက်၍စိတ်ဝင်စားစရာကောင်းသော ဦးနှောက်ဖွံ့ဖြိုးရေး လေ့ကျင့်ခန်းများကို သင်ကြားပေးပါသည်။ ၆လမှ ၆နှစ်အရွယ်
-          ကလေးငယ်များအတွက် ရည်ရွယ်ပြင်ဆင်ထားသော Heguru အွန်လိုင်းပရိုဂရမ်သည် တီထွင်ဖန်တီးနိုင်စွမ်း၊ မှတ်ဉာဏ်စွမ်းနှင့်
-          ပြဿနာဖြေရှင်းနိုင်စွမ်းတို့ကို ပျော်ရွှင်စရာကောင်းသော အပြန်အလှန်လှုပ်ရှားဆောင်ရွက်မှုများမှတဆင့်
-          ပြုစုပျိုးထောင်ပေးခြင်းဖြစ်ပါသည်။ အတွေ့အကြုံရင့်ဆရာ၊ဆရာမများ၏လမ်းညွှန်သင်ကြားပေးမှုနှင့် သင့်ကလေးငယ်သည်
-          နေအိမ်မှာပင် သက်တောင့်သက်သာဖြင့် ကမ္ဘာ့အဆင့် သင်ယူမှုအတွေ့အကြုံကို ခံစားရမည်ဖြစ်ပါသည်။ Heguru
-          အွန်လိုင်းပရိုဂရမ်နဲ့အတူ ကောင်းမွန်ကြွယ်ဝသော ခရီးစဉ်ကို စတင်လိုက်ပါ။
-        </p>
-      </div>
-    </div>
-
-    <style>
-      .parent-div:hover .img-hover {
-        transform: scale(1.3);
-      }
-      /* .img-hover {
+  <style>
+    .parent-div:hover .img-hover {
+      transform: scale(1.3);
+    }
+    /* .img-hover {
                     transform .2s;
                 } */
-      .parent-div {
-        /* width: 320px; */
-        /* height: 390px; */
-        overflow: hidden;
-        position: relative;
-      }
-    </style>
-  </div>
+    .parent-div {
+      /* width: 320px; */
+      /* height: 390px; */
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
 </Layout>

@@ -1,0 +1,26 @@
+---
+import ProductList from '~/components/functional/ProductList';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import ApiService from '~/services/ApiService';
+
+const metadata = {
+  title: 'Reviews',
+};
+
+const productData = await ApiService.getProducts();
+const products = productData.list;
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    isMain="main"
+    tagline="Product"
+    title="Our Products"
+    subtitle="See the difference! The features of Heguru’s Classes for Children"
+  />
+
+  <div class="lg:w-9/12 mx-auto px-8 lg:px-0">
+    <ProductList data={products} client:only="react" />
+  </div>
+</Layout>
