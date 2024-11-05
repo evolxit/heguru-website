@@ -1,0 +1,114 @@
+---
+import HeroText from '~/components/widgets/HeroText.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <div class="lg:w-9/12 mx-auto px-8 lg:px-0">
+    <HeroText isMain="main" tagline="About Us" title="5 purposes of Heguru Education" subtitle="" />
+
+    <div class="">
+      <div class="md:flex my-10">
+        <div class="md:w-1/2 xl:w-1/3">
+          <img src="https://placehold.jp/400x400.png" alt="" class="rounded object-contain" />
+        </div>
+
+        <div class="my-5 md:mt-0 md:w-1/2 xl:w-2/3 md:pl-5">
+          <h1 class="font-bold text-blue-600 text-xl">Heguru Education has 5 Purposes:</h1>
+          <h1 class="font-bold text-blue-600 text-xl mb-3">Heguru သင်တန်း၏ အဓိကရည်ရွယ်ချက် (၅)ချက်</h1>
+          <p>
+            <strong>Enlarging the "Vessel" for the Brain</strong><br />
+            Our primary focus is to provide early training that enables the Right Brain—the potential brain—to be activated
+            as quickly as possible. A key shortcut to achieving this is to develop a balance between the Implementation Zone
+            (IZ) and the Basic Zone (BZ), which encompasses nine foundational skills.<br />
+            It is essential for parents to have complete faith in their children's ability to unlock their Right Brain, as
+            this support plays a crucial role in their development.
+          </p>
+        </div>
+      </div>
+
+      <p class="mb-5">
+        <strong>၁. ဦးနှောက်သွေးကြောများကို ကြီးထွားစေခြင်း</strong>
+        <br />
+        အဓိကအားဖြင့် ညာဖက်ဦးနှောက်ကို ဖွံ ဖြိုးတိုးတက်စေရန် သင်ကြားပိုချချက်များသည် ဦးနှောက် သွေးကြောများကို လျင်မြန်စွာ
+        ကြီးထွားစေသည်။ ထိုသို့ဖြစ်လာစေရန် ဦးနှောက်၏ အရေးပါသော နယ်ပယ်များနှင့် ဆက်လက်ဖွံဖြိုးတိုးတက်ရန် လိုအပ်သည့် နယ်ပယ်များကို
+        အချိုးအစားညီညီ ဖွံဖြိုးအောင်ပြုလုပ်ဆောင်ရွက်ရန်မှာ လျင်မြန်သော နည်းလမ်းဖြစ်သည်။ မိဘများအနေဖြင့် မိမိကလေး၏ ညာဖက်ဦးနှောက်
+        ဖွံဖြိုးလာစေရန် ကလေး၏ စွမ်းဆောင်ရည်၊ အရည်အချင်းနှင့် ပတ်သက်၍ ယုံကြည်ချက် ခိုင်ခိုင်မာမာ ထားရှိရမည်။
+      </p>
+
+      <p class="mb-5">
+        <strong>Drawing Out Multiple Talents from Children's Personalities</strong>
+        <br />
+        To truly engage with a subject, children need the time and space to immerse themselves fully. This deep involvement
+        in an activity not only enhances their enjoyment but also plays a crucial role in uncovering their unique talents.
+        By allowing children to explore their interests, we can significantly elevate their capacities and foster a love
+        for learning that lasts a lifetime.
+      </p>
+
+      <p class="mb-5">
+        <strong>၂. ကလေးငယ်၏ ပင်ကိုစိတ်နေစိတ်ထား အကျင့်စရိုက်မှ များပြားလှစွာသော စွမ်းရည်များကို ထုတ်ဖော်ခြင်း</strong>
+        <br />
+        လုံလောက်သောအချိန်ပေးပြီး စွမ်းဆောင်ရည်မြင့် သင်တန်းများကို အဆုံးသတ်အထိ သင်ကြား မည်ဆိုပါက ရလဒ်ကောင်းများ ရရှိစေနိုင်မည်ဖြစ်သည်။
+        ကလေးများ၏ အာရုံစူးစိုက်မှု အပြည့် အဝရရှိနေချိန်တွင် လမ်းညွှန်သင်ကြားပိုချလျှင် စွမ်းရည်ပိုမိုမြင့်မားစေမည်ဖြစ်သည်။
+      </p>
+
+      <p class="mb-5">
+        <strong>Fostering Self-Confidence and Unlocking Potential</strong><br />
+        Children experience genuine excitement when they discover their abilities, no matter how small. It’s vital to provide
+        them with numerous opportunities to enjoy these moments, as they significantly contribute to building self-confidence.
+        Parents play a crucial role in this journey by wholeheartedly believing in their children's potential.
+      </p>
+
+      <p class="mb-5">
+        <strong>၃. မိမိကိုယ်ကို ယုံကြည်ခြင်းနှင့် ကိုယ်ပိုင်အရည်အချင်းများ အသုံးချတတ်စေရန် လမ်းညွန်ပြသခြင်း</strong>
+        <br />
+        ကလေးများသည် မိမိ၏ လုပ်ဆောင်ချက်တစ်ခုကို အောင်မြင်စွာလုပ်ဆောင်နိုင်လျှင် စိတ်လှုပ်ရှား လာကာ လွန်စွာပျော်ရွှင်တက်သည်။
+        သိုဖြစ်၍ ကလေးငယ်များ ပျော်ပျော်ရွှင်ရွှင် မိမိကိုယ်တိုင် အောင်မြင်စွာ လုပ်ဆောင်နိုင်စွမ်း ရှိစေရန် အခွင့်အလမ်းများကို
+        ဖန်တီးပေးရန် လိုအပ်သည်။ မိဘများအနေဖြင့် မိမိတို ကလေး၏ လုပ်ဆောင်နိုင်စွမ်းနှင့် ပတ်သက်၍ ယုံကြည်ပေးရန်မှာလည်း အရေးကြီးသော
+        အချက်ဖြစ်သည်။
+      </p>
+
+      <p class="mb-5">
+        <strong>Cultivating the Power of the Mind (EQ)</strong>
+        <br />
+        The family plays a crucial role in nurturing children's emotional intelligence (EQ). Providing unconditional love
+        and engaging in learning together creates a supportive environment for growth. At Heguru, we are committed to offering
+        support at various levels to foster an atmosphere that encourages the development of the mind.
+      </p>
+
+      <p class="mb-5">
+        <strong>၄. စိတ်ခံစားချက်ဆိုင်ရာ စွမ်းရည်များကို ပျိုးထောင်ပေးခြင်း (EQ မြှင့်တင်ခြင်း)</strong>
+        <br />
+        ကလေးများ၏ စိတ်ခံစားချက်ဆိုင်ရာ စွမ်းရည်များကို ပျိုးထောင်ပေးရာတွင် မိသားစုဝင်များ တစ်တပ်တစ်အား ပါဝင်မှုသည် အလွန်အရေးကြီးသည်။
+        ကလေးများသည် ချစ်ခြင်းမေတ္တာကို အပြည့်အဝရရှိရန် လိုအပ်သည်။ မိမိနှင့် ကလေးကြား နားလည်မှုနှင့် မေတ္တာတရား ပိုမိုတိုးပွားလာစေရန်
+        မိမိကလေးနှင့်အတူ ကစားခြင်း၊ စာလေ့လာခြင်းသည် အကောင်းဆုံး လုပ်ဆောင်ချက်ဖြစ်သည်။ Heguru သင်တန်းကျောင်းတွင် ကလေးများ၏
+        စိတ်ခံစားချက်ဆိုင်ရာ စွမ်းရည်များ (EQ) ကို တိုးတက်စေရန် ရည်ရွယ်၍ သင်ကြားမှု နည်းလမ်းကောင်းများစွာကို ထည့်သွင်းသင်ကြားပေးသည်။
+      </p>
+
+      <p class="mb-5">
+        <strong>Cultivating Genuine Thinking Power</strong>
+        <br />
+        Fostering the ability to think logically and evaluate situations calmly is essential for children's development.
+        Encouraging them to ask "Why?" without hesitation nurtures curiosity and critical thinking. From a young age, parents
+        should engage in enjoyable experiences with their children to support this growth. To help children excel in mathematics
+        (logic), it’s important to strengthen the Left Brain as well. We promote logical thinking in our Pre-School and Primary
+        Classes, laying a solid foundation for their future learning.
+      </p>
+
+      <p class="mb-5">
+        <strong>၅. စိတ်ကူးစိတ်သန်း အတွေးအခေါ်ကို မြှင့်တင်ပေးခြင်း</strong>
+        <br />
+        Heguru သင်တန်းကျောင်းတွင် ကလေးငယ်များ၏ တွေးခေါ်နိုင်စွမ်း စွမ်းရည်မြှင့်တင်ပေးပြီး ပြဿနာများကို အေးအေးဆေးဆေး ဖြေရှင်းတတ်စေရန်
+        လေ့ကျင့်ပေးသည်။ ထို့အပြင် အကြောင်းအရာတစ်ခုကို စူးစမ်း လေ့လာရာနှင့် လုပ်ကိုင်ဆောင်ရွက်ရာတွင် တွန့်ဆုတ်မနေဘဲ ရဲရဲဝံ့ဝံ့
+        မေးမြန်းနိုင်ခြင်းနှင့် လုပ်ကိုင်တတ်ခြင်း တို့ကိုပါ ပျိုးထောင်ပေးသည်။ မိဘများသည် ကလေးများ ငယ်ရွယ်စဉ်တွင် ပျော်ရွှင်ဖွယ်ကောင်းသော
+        အမှတ်တရများကို ဖန်တီးပေးခြင်းမှာလည်း ကလေးများ၏ ဖွံဖြိုးမှုကို အထောက်အကူပြုသည်။ ထိုသို့ လုပ်ဆောင်ချက်များကြောင့် သင်္ချာဘာသာရပ်တွင်
+        တွေးခေါ်နိုင်မှု တိုးတက်လာရုံသာမက ဘယ်ဖက်ဦးနှောက် ၏ ဖွံဖြိုးမှုကိုပါ အထောက်အကူပြုသည်။ စိတ်ကူးစိတ်သန်းနှင့် တွေးခေါ်နိုင်စွမ်း
+        စွမ်းရည်များကို တိုးတက်စေရန် မူကြိုအဆင့်နှင့် မူလတန်းအဆင့်များတွင် ထည့်သွင်း သင်ကြားပေးပါသည်။
+      </p>
+    </div>
+  </div>
+</Layout>
