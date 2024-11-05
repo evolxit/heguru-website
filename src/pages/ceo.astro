@@ -1,0 +1,49 @@
+---
+import HeroText from '~/components/widgets/HeroText.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <div class="xl:w-9/12 mx-auto px-8 xl:px-0">
+    <HeroText isMain="main" tagline="About Us" title="HEGL (Heguru) CEO Ruiko Henmi" subtitle="" />
+
+    <div class="">
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">The person who developed "Hado Reading"</h1>
+      <div class="md:flex">
+        <div class="w-1/2 xl:w-1/3">
+          <img src="https://placehold.jp/400x400.png" alt="" class="rounded object-contain" />
+        </div>
+        <p class="mb-5 mt-5 md:mt-0 w-1/2 xl:w-2/3 md:pl-5">
+          <strong>HEGL (Heguru) CEO Ruiko Henmi</strong>
+          <br />
+          In 1997, I developed a groundbreaking technique for reading and comprehending a book simply by flipping through
+          its pages rapidly. I named this method "Hado Reading" (Wave Reading) because it transcends traditional speed reading.<br
+          />
+          "Hado Reading" offers the extraordinary ability to understand a book's content in just one second. Anyone can achieve
+          this skill by starting their training with the Heguru program at an early age. Once you master "Hado Reading,"
+          you will be challenged to read 10,000 books in a month. Successfully reaching this goal grants you membership in
+          the prestigious "Ichimankai."<br />
+          At Heguru, our mission is to awaken and nurture the hidden talents of children, not only in Japan but around the
+          world. We aim to help them flourish with joy and confidence. We invite you to embrace the Heguru program to realize
+          your dreams and lead a fulfilling life.<br />
+        </p>
+      </div>
+
+      <h1 class="font-bold text-blue-600 text-xl my-3 mt-10">“HADO READING” ကို ဖန်တီးသူ</h1>
+      <p class="mb-5">
+        <strong>HEGL (Heguru) CEO Ruiko Henmi</strong>
+        <br />
+        HEGL Heguru ၏ CEO Ruiko Henmi သည် ၁၉၉၇ ခုနှစ်တွင် ကမ္ဘာနှင့်တစ်ဝန်း ပထမဦးဆုံး စာရွက်ကလေးများကို လျင်မြန်စွာလှန်ရုံဖြင့်
+        စာအုပ်ပါအကြောင်းအရာများကို နားလည်သိရှိစေနိုင် သော ထူးခြားဆန်းသစ်သည့် စာဖတ်ခြင်း နည်းလမ်းအသစ် “Hado Reading" ကို ဖန်တီးခဲ့ပါသည်။
+        ဤစာဖတ်နည်းသည် Speed Reading ထက်ပို၍ မြန်ဆန်သည်။ “Hado Reading” ၏ စက္ကန့်ပိုင်း အတွင်း စာအုပ်ပါအကြောင်းအရာများကို
+        နားလည်စေနိုင်သည်မှာ ထူးဆန်းသော်လည်း မည်သူမဆို ငယ်ရွယ်သည့်အချိန်တွင် Heguru ၏ "Hado Reading" ကိုလေ့ကျင့်ခဲ့ပါက ထိုစွမ်းရည်ကို
+        အလွယ်တကူ ပိုင်ဆိုင်နိုင်သည်။ "Hado Reading" ကို ကျွမ်းကျင်သူ ကျောင်းသား၊ ကျောင်းသူ များသည် တစ်လအတွင်း စာအုပ်ပေါင်း
+        တစ်သောင်းကို ဖတ်နိုင်ပါက Heguru Japan ကျောင်း၏ "Ichimankai" အဖွဲ့ဝင်အဖြစ် သတ်မှတ်ခြင်းခံရသည်။
+      </p>
+    </div>
+  </div>
+</Layout>

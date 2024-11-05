@@ -10,7 +10,28 @@ export const headerData = {
     },
     {
       text: 'About',
-      href: getPermalink('/about'),
+      links: [
+        {
+          text: 'About Us',
+          href: getPermalink('/about'),
+        },
+        {
+          text: 'Heguru Method',
+          href: getPermalink('/method'),
+        },
+        {
+          text: 'HEGL CEO Ruiko Henmi',
+          href: getPermalink('/ceo'),
+        },
+        {
+          text: '5 purposes of Heguru Education',
+          href: getPermalink('/purposes'),
+        },
+        {
+          text: 'Heguru World Wide',
+          href: getPermalink('/worldwide'),
+        },
+      ],
     },
     {
       text: 'Programs',
