@@ -7,6 +7,7 @@ import FloatImg from '~/components/common/FloatImg.astro';
 import FloatIcon from '~/components/common/FloatIcon.astro';
 import ApiService from '~/services/ApiService';
 import CategoryList from '~/components/functional/CategoryList';
+import HeroText from '~/components/widgets/HeroText.astro';
 
 const metadata = {
   title: 'HGU',
@@ -163,14 +164,19 @@ const balloonsImg = '~/assets/images/balloons.png';
   </div>
 
   <div class="w-full my-10 px-5 relative" id="popular">
-    <div class="slider xl:w-10/12 mx-auto py-10">
+    <HeroText
+      tagline="Programs"
+      title="Title for our programs"
+      subtitle="Heguru Classes for Children provide courses for training the Whole Brain, which are divided into various programs by age group; Prenatal Education (for pregnant women), Infant & Toddler Classes and Preschool Classes."
+    />
+    <div class="slider xl:w-10/12 mx-auto pb-10">
       <div class="lg:w-9/12 mx-auto mb-10">
-        <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 main-heading-font">Our Programs</h3>
-        <p class="text-center text-gray-400 text-base">
+        <!-- <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 main-heading-font">Our Programs</h3> -->
+        <!-- <p class="text-center text-gray-400 text-base">
           Heguru Classes for Children provide courses for training the Whole Brain, which are divided into various
           programs by age group; Prenatal Education (for pregnant women), Infant & Toddler Classes and Preschool
           Classes.
-        </p>
+        </p> -->
       </div>
       <div class="slides">
         <div class="max-w-sm px-3 slide">
@@ -387,13 +393,9 @@ const balloonsImg = '~/assets/images/balloons.png';
     <!-- bg opacity icons -->
   </div>
 
-  <div class="w-full bg-gray-800 my-5 py-20 pb-32 relative">
-    <!-- <HeroText
-      tagline="Products"
-      title="Our Products"
-      subtitle="See the difference! The features of Heguru’s Classes for Children"
-    /> -->
-    <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 main-heading-font">Our Products</h3>
+  <div class="w-full bg-gray-800 my-5 pb-32 relative">
+    <HeroText tagline="Products" title="Title for Our Products" subtitle="" />
+    <!-- <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 main-heading-font">Our Products</h3> -->
     <p class="text-center text-gray-200 text-base mb-20">See what parents are saying about Heguru.</p>
     <CategoryList categories={categories} client:only="react" />
 
@@ -539,7 +541,7 @@ const balloonsImg = '~/assets/images/balloons.png';
     </Content>
   </div>
 
-  <div class="w-full bg-blue-50 py-20 relative">
+  <div class="w-full bg-blue-50 pb-20 relative">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -569,10 +571,11 @@ const balloonsImg = '~/assets/images/balloons.png';
       ></path><path d="M12 11l1 1l-1 1l-1 -1z"></path></svg
     >
 
-    <div class="lg:w-9/12 mx-auto mb-10">
+    <HeroText tagline="Testimonials" title="Words from Parents" subtitle="See what parents are saying about Heguru." />
+    <!-- <div class="lg:w-9/12 mx-auto mb-10">
       <h3 class="text-center font-bold text-3xl text-primary-500 mb-3 main-heading-font">Words from Parents</h3>
       <p class="text-center text-gray-400 text-base">See what parents are saying about Heguru.</p>
-    </div>
+    </div> -->
 
     <div
       class="xl:w-10/12 md:w-full px-8 xl:px-0 mx-auto grid xl:grid-cols-3 md:grid-cols-3 gap-2 gap-y-10 place-items-center"
@@ -628,8 +631,13 @@ const balloonsImg = '~/assets/images/balloons.png';
     >
 
     <div class="lg:w-9/12 mx-auto">
-      <h3 class="text-center font-bold text-3xl text-primary-500 main-heading-font">Contact Us</h3>
-      <p class="text-center text-gray-400 text-base">We’re here to help and answer any question you might have.</p>
+      <HeroText
+        tagline="Contact"
+        title="Title for contact us"
+        subtitle="We’re here to help and answer any question you might have."
+      />
+      <!-- <h3 class="text-center font-bold text-3xl text-primary-500 main-heading-font">Contact Us</h3>
+      <p class="text-center text-gray-400 text-base">We’re here to help and answer any question you might have.</p> -->
 
       <div class="w-full flex justify-center mt-10">
         <a href="/contact"
