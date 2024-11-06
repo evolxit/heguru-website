@@ -21,10 +21,26 @@ async function getProducts() {
   return await response.json();
 }
 
+async function register(payload) {
+  const requestOptions = buildRequest('POST', payload);
+  const url = buildUrl('/v1/parent-register');
+  const response = await fetch(url, requestOptions);
+  return await response.json();
+}
+
+async function login(payload) {
+  const requestOptions = buildRequest('POST', payload);
+  const url = buildUrl('/v1/parent-login');
+  const response = await fetch(url, requestOptions);
+  return await response.json();
+}
+
 const ApiService = {
   getCategories,
   getBrands,
   getProducts,
+  register,
+  login,
 };
 
 export default ApiService;
