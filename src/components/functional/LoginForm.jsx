@@ -1,26 +1,30 @@
-// import { useSetRecoilState } from 'recoil';
-// import { tokenState } from '~/utils/atoms';
-// import { generateToken } from '~/utils/helpers';
+import { useState } from 'react';
+import { useCookies } from 'react-cookie';
+import ApiService from '~/services/ApiService';
 
 const LoginForm = () => {
-  // const setToken = useSetRecoilState(tokenState);
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
 
-  const handleLogin = (event) => {
+  const [, setCookie] = useCookies(['token', 'userid']);
+
+  const handleLogin = async (event) => {
     event.preventDefault();
-    // setToken(generateToken());
-    // localStorage.setItem('token', generateToken());
-    // location.href = '/authenticated';
+
+    const response = await ApiService.login(formData);
+    const token = response.token;
+    const user = response.user;
+
+    setCookie('token', token);
+    setCookie('userid', user.id);
+
     window.location.href = '/authenticated';
   };
 
-  // const testRedirect = () => {
-  //   console.log('hello');
-  //   // window.location.href = '/register';
-  // };
-
   return (
     <div className="">
-      {/* <span onClick={testRedirect}>click</span> */}
       <form onSubmit={handleLogin}>
         <div className="flex max-w-96 flex-col space-y-5 rounded-lg border py-10 px-5 shadow-xl mx-auto">
           <div className="mx-auto mb-2 space-y-3">
@@ -34,7 +38,9 @@ const LoginForm = () => {
                 id="email"
                 className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-secondary-600 focus:outline-none focus:ring-0"
                 placeholder=""
-                // onChange={(e) => setEmail(e.target.value)}
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, ['email']: e.target.value })}
+                required
               />
               <label
                 htmlFor="email"
@@ -51,7 +57,9 @@ const LoginForm = () => {
                 id="password"
                 className="border-1 peer block w-full appearance-none rounded-lg border border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-secondary-600 focus:outline-none focus:ring-0"
                 placeholder=" "
-                // onChange={(e) => setPwd(e.target.value)}
+                value={formData.password}
+                onChange={(e) => setFormData({ ...formData, ['password']: e.target.value })}
+                required
               />
               <label
                 htmlFor="password"
@@ -61,9 +69,9 @@ const LoginForm = () => {
               </label>
             </div>
           </div>
-          <label>
+          {/* <label>
             <input type="checkbox" /> <span>Remember me</span>
-          </label>
+          </label> */}
           <button className="rounded-lg bg-primary-500 hover:bg-primary-700 py-3 font-bold text-white">Login</button>
           <span>
             Don't have an account?{' '}

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useCookies } from 'react-cookie';
+import ApiService from '~/services/ApiService';
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -7,13 +9,19 @@ const RegisterForm = () => {
     password: '',
     confirmPassword: '',
     class: '',
-    childDob: '',
+    birthYear: '',
     childName: '',
     phone: '',
   });
 
   const [errorMessage, setErrorMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
+  const [, setCookie] = useCookies(['token', 'userid']);
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,15 +31,21 @@ const RegisterForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('formData', formData);
+
     if (formData.password !== formData.confirmPassword) {
       setErrorMessage('Passwords do not match!');
-      setSuccessMessage('');
     } else {
+      const response = await ApiService.register(formData);
+      const token = response.token;
+      const user = response.user;
+
+      setCookie('token', token);
+      setCookie('userid', user.id);
       setErrorMessage('');
-      setSuccessMessage('Registration Successful!');
+
+      window.location.href = '/authenticated';
     }
   };
 
@@ -75,14 +89,14 @@ const RegisterForm = () => {
           <div className="">
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8">
               <div className="my-4">
-                <label htmlFor="childDob" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="birthYear" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Your child year of birth
                 </label>
                 <input
                   type="number"
-                  id="childDob"
-                  name="childDob"
-                  value={formData.childDob}
+                  id="birthYear"
+                  name="birthYear"
+                  value={formData.birthYear}
                   onChange={handleChange}
                   className="shadow-sm rounded-md w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                   placeholder="Year of birth"
@@ -154,6 +168,7 @@ const RegisterForm = () => {
                     placeholder="Enter your password"
                     required
                   />
+                  {errorMessage && <p className="text-sm italic text-red-600">{errorMessage}</p>}
                 </div>
                 <div className="my-4">
                   <label
@@ -172,6 +187,7 @@ const RegisterForm = () => {
                     placeholder="Confirm your password"
                     required
                   />
+                  {errorMessage && <p className="text-sm italic text-red-600">{errorMessage}</p>}
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8">
@@ -196,6 +212,8 @@ const RegisterForm = () => {
               <input
                 type="checkbox"
                 id="agree"
+                checked={isChecked}
+                onChange={handleCheckboxChange}
                 className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 focus:outline-none"
               />
               <label htmlFor="agree" className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
@@ -206,12 +224,12 @@ const RegisterForm = () => {
               </label>
             </div>
           </div>
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
-          {successMessage && <p className="success-message">{successMessage}</p>}
+
           <div className="flex justify-center mt-10">
             <button
               type="submit"
-              className="py-2 px-4 border border-transparent rounded shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+              disabled={!isChecked}
+              className={`${!isChecked ? 'cursor-not-allowed bg-gray-300' : 'bg-primary-600 hover:bg-primary-700 focus:ring-primary-500'} py-2 px-4 border border-transparent rounded shadow-sm text-sm font-medium text-white   focus:outline-none focus:ring-2 focus:ring-offset-2 `}
             >
               Register
             </button>
