@@ -1,10 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
 
 const Dashboard = () => {
   const [cookies] = useCookies(['token', 'userid']);
   const [pwd, setPwd] = useState('');
   const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (!cookies.token) {
+      window.location.href = '/login';
+    }
+  });
 
   const handlePassword = () => {
     if (pwd == '123') {
