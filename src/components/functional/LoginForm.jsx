@@ -15,18 +15,23 @@ const LoginForm = () => {
   });
 
   const [cookies, setCookie] = useCookies(['token', 'userid']);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleLogin = async (event) => {
     event.preventDefault();
 
     const response = await ApiService.login(formData);
-    const token = response.token;
-    const user = response.user;
+    if (response.status == 200) {
+      const token = response.token;
+      const user = response.user;
 
-    setCookie('token', token);
-    setCookie('userid', user.id);
+      setCookie('token', token);
+      setCookie('userid', user.id);
 
-    window.location.href = '/authenticated';
+      window.location.href = '/authenticated';
+    } else {
+      setErrorMessage(response.message);
+    }
   };
 
   return (
@@ -76,6 +81,7 @@ const LoginForm = () => {
                 </label>
               </div>
             </div>
+            {errorMessage && <p className="text-sm italic text-red-600">{errorMessage}</p>}
             {/* <label>
             <input type="checkbox" /> <span>Remember me</span>
           </label> */}
