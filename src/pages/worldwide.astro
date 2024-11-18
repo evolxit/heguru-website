@@ -1,10 +1,12 @@
 ---
+import Img from '~/components/common/Img.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'About us',
 };
+const worldwide = '~/assets/images/worldwide.jpg';
 ---
 
 <Layout metadata={metadata}>
@@ -43,7 +45,8 @@ const metadata = {
       </p>
 
       <div class="w-full my-20">
-        <img src="https://placehold.jp/1200x500.png" alt="" class="rounded object-contain" />
+        <!-- <img src={worldwide} alt="" class="rounded object-contain" /> -->
+        <Img src={worldwide} alt="online" class:list={'rounded-t-lg'} />
       </div>
     </div>
   </div>

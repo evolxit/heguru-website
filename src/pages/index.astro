@@ -61,7 +61,12 @@ const bannerKid = '~/assets/images/banner-kid-1.png';
 const bottomShape = '~/assets/images/bottom.png';
 const flyImg = '~/assets/images/fly.png';
 const balloonsImg = '~/assets/images/balloons.png';
-// const carImg = '~/assets/images/car.png';
+const missionImg = '~/assets/images/our-mission.png';
+const prenatal = '~/assets/images/prenatal.jpg';
+const preschool1 = '~/assets/images/preschool1.jpg';
+const preschool2 = '~/assets/images/preschool2.jpg';
+const online = '~/assets/images/online.jpg';
+const infant = '~/assets/images/infant.jpg';
 ---
 
 <Layout metadata={metadata}>
@@ -172,7 +177,7 @@ const balloonsImg = '~/assets/images/balloons.png';
               >Enroll Now</a
             >
           </div>
-          <div class="mt-10 md:mt-0 px-8 md:px-0 xl:px-20 md:pt-20">
+          <div class="mt-10 md:mt-0 px-8 md:px-0 xl:pr-32 xl:pl-10 md:pt-20">
             <Img src={bannerKid} alt="Banner Kids" class:list={''} />
           </div>
         </div>
@@ -200,7 +205,8 @@ const balloonsImg = '~/assets/images/balloons.png';
         <div class="max-w-sm px-3 slide">
           <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 parent-div relative">
             <a href="#">
-              <img class="rounded-t-lg" style="transition: transform 0.8s ease;" src="/600x300.png" alt="" />
+              <!-- <img class="rounded-t-lg" style="transition: transform 0.8s ease;" src={infant} alt="" /> -->
+              <Img src={infant} alt="Infant" class:list={'rounded-t-lg'} />
               <!-- <Img src={bannerImg} alt="App Store Image" class:list={'w-full rounded-lg border-red-300 border-2'} /> -->
             </a>
             <div class="p-5 pt-4 text-sm bg-white">
@@ -220,7 +226,8 @@ const balloonsImg = '~/assets/images/balloons.png';
         <div class="max-w-sm px-3 slide">
           <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 parent-div relative">
             <a href="#">
-              <img class="rounded-t-lg" style="transition: transform 0.8s ease;" src="/600x300.png" alt="" />
+              <!-- <img class="rounded-t-lg" style="transition: transform 0.8s ease;" src={preschool1} alt="" /> -->
+              <Img src={preschool1} alt="preschool1" class:list={'rounded-t-lg'} />
             </a>
             <div class="p-5 pt-4 text-sm bg-white">
               <a href="/preschool">
@@ -238,7 +245,8 @@ const balloonsImg = '~/assets/images/balloons.png';
         <div class="max-w-sm px-3 slide">
           <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 parent-div relative">
             <a href="#">
-              <img class="rounded-t-lg" style="transition: transform 0.8s ease;" src="/600x300.png" alt="" />
+              <!-- <img class="rounded-t-lg" style="transition: transform 0.8s ease;" src={preschool2} alt="" /> -->
+              <Img src={preschool2} alt="preschool2" class:list={'rounded-t-lg'} />
             </a>
             <div class="p-5 pt-4 text-sm bg-white">
               <a href="/preschool2">
@@ -256,12 +264,8 @@ const balloonsImg = '~/assets/images/balloons.png';
         <div class="max-w-sm px-3 slide">
           <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 parent-div relative">
             <a href="#">
-              <img
-                class="rounded-t-lg object-cover"
-                style="transition: transform 0.8s ease;"
-                src="/600x300.png"
-                alt=""
-              />
+              <!-- <img class="rounded-t-lg object-cover" style="transition: transform 0.8s ease;" src={prenatal} alt="" /> -->
+              <Img src={prenatal} alt="prenatal" class:list={'rounded-t-lg'} />
             </a>
             <div class="p-5 pt-4 text-sm bg-white">
               <a href="/prenatal">
@@ -279,12 +283,8 @@ const balloonsImg = '~/assets/images/balloons.png';
         <div class="max-w-sm px-3 slide">
           <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 parent-div relative">
             <a href="#">
-              <img
-                class="rounded-t-lg object-cover"
-                style="transition: transform 0.8s ease;"
-                src="/600x300.png"
-                alt=""
-              />
+              <!-- <img class="rounded-t-lg object-cover" style="transition: transform 0.8s ease;" src={online} alt="" /> -->
+              <Img src={online} alt="online" class:list={'rounded-t-lg'} />
             </a>
             <div class="p-5 pt-4 text-sm bg-white">
               <a href="/online">
@@ -512,7 +512,7 @@ const balloonsImg = '~/assets/images/balloons.png';
       title=""
       items={[]}
       image={{
-        src: '/400x300.png',
+        src: missionImg,
         alt: 'Colorful Image',
       }}
     >
