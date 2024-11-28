@@ -8,19 +8,32 @@ const RegisterForm = () => {
     email: '',
     password: '',
     confirmPassword: '',
-    class: '',
+    class: [],
     birthYear: '',
     childName: '',
     phone: '',
   });
 
+  const classes = ['infant', 'preschool'];
+
   const [errorMessage, setErrorMessage] = useState('');
+  const [selectedClass, setselectedClass] = useState([]);
   const [, setCookie] = useCookies(['token', 'userid']);
 
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleCheckboxChange = () => {
+  const handleAgreeCheckboxChange = () => {
     setIsChecked(!isChecked);
+  };
+
+  const handleCheckboxChange = (c) => {
+    setselectedClass((prev) => (prev.includes(c) ? prev.filter((item) => item !== c) : [...prev, c]));
+    // setFormData({
+    //   ...formData,
+    //   class: () => {
+    //     formData.class.includes(c) ? formData.class.filter((item) => item !== c) : [...formData.class, c];
+    //   },
+    // });
   };
 
   const handleChange = (e) => {
@@ -34,10 +47,15 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setFormData({
+      ...formData,
+      class: selectedClass,
+    });
+
     if (formData.password !== formData.confirmPassword) {
       setErrorMessage('Passwords do not match!');
     } else {
-      const response = await ApiService.register(formData);
+      const response = await ApiService.register(formData, selectedClass);
       const token = response.token;
       const user = response.user;
 
@@ -58,32 +76,19 @@ const RegisterForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="sm:flex">
             <div className="flex items-center mr-10">
-              <input
-                type="radio"
-                id="infant"
-                name="class"
-                value="infant"
-                onChange={handleChange}
-                checked={formData.class == 'infant'}
-                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 focus:outline-none"
-              />
-              <label htmlFor="infant" className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
-                Infant & Toddler Class
-              </label>
-            </div>
-            <div className="flex items-center">
-              <input
-                type="radio"
-                id="preschool"
-                name="class"
-                value="preschool"
-                onChange={handleChange}
-                checked={formData.class == 'preschool'}
-                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 focus:outline-none"
-              />
-              <label htmlFor="preschool" className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
-                Preschool Classes
-              </label>
+              {classes.map((c) => (
+                <label key={c} className="mr-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    // checked={formData.class.includes(c)}
+                    onChange={() => handleCheckboxChange(c)}
+                    className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 focus:outline-none mr-2"
+                  />
+
+                  {c == 'infant' ? 'Infant & Toddler Class' : 'Preschool Classes'}
+                </label>
+              ))}
             </div>
           </div>
           <div className="">
@@ -212,7 +217,7 @@ const RegisterForm = () => {
                 type="checkbox"
                 id="agree"
                 checked={isChecked}
-                onChange={handleCheckboxChange}
+                onChange={handleAgreeCheckboxChange}
                 className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 focus:outline-none"
               />
               <label htmlFor="agree" className="ml-2 block text-sm text-gray-700 dark:text-gray-300">

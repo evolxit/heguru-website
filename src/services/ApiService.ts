@@ -21,7 +21,8 @@ async function getProducts() {
   return await response.json();
 }
 
-async function register(payload) {
+async function register(payload, classList) {
+  payload['class'] = classList;
   const requestOptions = buildRequest('POST', payload);
   const url = buildUrl('/v1/parent-register');
   const response = await fetch(url, requestOptions);
