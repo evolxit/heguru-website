@@ -80,7 +80,6 @@ const RegisterForm = () => {
                 <label key={c} className="mr-5 cursor-pointer">
                   <input
                     type="checkbox"
-                    id="agree"
                     // checked={formData.class.includes(c)}
                     onChange={() => handleCheckboxChange(c)}
                     className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 focus:outline-none mr-2"
@@ -218,7 +217,7 @@ const RegisterForm = () => {
                 id="agree"
                 checked={isChecked}
                 onChange={handleAgreeCheckboxChange}
-                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 focus:outline-none"
+                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 focus:outline-none cursor-pointer"
               />
               <label htmlFor="agree" className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
                 I agree the{' '}
