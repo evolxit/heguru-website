@@ -1,4 +1,5 @@
 ---
+import Reviews from '~/components/ui/Reviews.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -76,37 +77,6 @@ const metadata = {
   <div class="w-full pb-20 px-10 lg:px-0">
     <HeroText tagline="" title="Words from Parents" subtitle="See what parents are saying about Heguru." />
 
-    <div class="lg:w-9/12 md:w-full mx-auto grid lg:grid-cols-3 md:grid-cols-3 gap-2 gap-y-10 place-items-center">
-      <iframe
-        style="width:90%; border-radius: 5px;"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/21hmP6q10wQ"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      >
-      </iframe>
-      <iframe
-        style="width:90%; border-radius: 5px;"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/uAVztJem0pc"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      >
-      </iframe>
-      <iframe
-        style="width:90%; border-radius: 5px;"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/mQtOYzi-eEU"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      >
-      </iframe>
-    </div>
+    <Reviews />
   </div>
 </Layout>

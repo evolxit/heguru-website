@@ -9,6 +9,7 @@ import ApiService from '~/services/ApiService';
 import CategoryList from '~/components/functional/CategoryList';
 import HeroText from '~/components/widgets/HeroText.astro';
 import DefaultBtn from '~/components/ui/DefaultBtn.astro';
+import Reviews from '~/components/ui/Reviews.astro';
 
 const metadata = {
   title: 'HGU',
@@ -17,7 +18,6 @@ const metadata = {
 
 const categoryData = await ApiService.getCategories();
 const categories = categoryData.list[0].children;
-console.log('cat', categories);
 
 // const categories = [
 //   {
@@ -569,43 +569,7 @@ const infant = '~/assets/images/infant.jpg';
       <p class="text-center text-gray-400 text-base">See what parents are saying about Heguru.</p>
     </div> -->
 
-    <div
-      class="xl:w-10/12 md:w-full px-8 xl:px-0 mx-auto grid xl:grid-cols-3 md:grid-cols-3 gap-2 gap-y-10 place-items-center"
-    >
-      <iframe
-        style=" border-radius: 5px;"
-        class="w-full"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/21hmP6q10wQ"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      >
-      </iframe>
-      <iframe
-        style=" border-radius: 5px;"
-        class="w-full"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/uAVztJem0pc"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      >
-      </iframe>
-      <iframe
-        style=" border-radius: 5px;"
-        class="w-full"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/mQtOYzi-eEU"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      >
-      </iframe>
-    </div>
+    <Reviews />
   </div>
 
   <div class="w-full my-10 relative" id="popular">

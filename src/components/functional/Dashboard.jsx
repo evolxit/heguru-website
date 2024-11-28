@@ -17,10 +17,8 @@ const Dashboard = () => {
   // const [isVisible, setIsVisible] = useState(false);
   // const handlePassword = () => {
   //   if (pwd == '123') {
-  //     console.log('password correct');
   //     setIsVisible(true);
   //   } else {
-  //     console.log('incorrect');
   //     setIsVisible(false);
   //   }
   // };
