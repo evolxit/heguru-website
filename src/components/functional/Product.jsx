@@ -16,7 +16,7 @@ const Product = ({ item, type }) => {
           {type == 'category' && (
             <a
               href="/products"
-              class="absolute -bottom-3 -right-3 tag-line-font text-xs tracking-wider hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded-md px-3 py-2"
+              className="absolute -bottom-3 -right-3 tag-line-font text-xs tracking-wider hover:bg-primary-700 font-bold inline-block bg-primary-500 text-white rounded-md px-3 py-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -25,10 +25,10 @@ const Product = ({ item, type }) => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"
               >
                 <>
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
