@@ -1,4 +1,5 @@
 ---
+import Img from '~/components/common/Img.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -6,6 +7,8 @@ const metadata = {
   title: 'Programs',
   items: [],
 };
+
+const infanttoddler = '~/assets/images/infant-toddler.jpg';
 ---
 
 <Layout metadata={metadata}>
@@ -40,35 +43,42 @@ const metadata = {
       အတန်းအရေအတွက် တစ်နှစ်လျှင် ၄၂ တန်း
       <br />
 
-      <h1 class="font-bold mt-10 mb-5 text-blue-600">Highlights of This Program:</h1>
+      <div class="md:flex my-10 items-center">
+        <div class="my-5 md:mt-0 md:w-2/3 xl:w-3/4 md:pr-5 text-justify">
+          <h1 class="font-bold mt-3 mb-5 text-blue-600">Highlights of This Program:</h1>
 
-      <ul class="list-disc ml-5">
-        <li>
-          <strong>Enhancing Brain Capacity:</strong> Focus on enlarging the brain capacity of children.
-        </li>
-        <li>
-          <strong>Personalized Guidance:</strong> With two teachers in the class, lessons are fast-paced and provide personal
-          guidance.
-        </li>
-        <li>
-          <strong>Engaging Environment:</strong> Effective use of lighting, sound, and rhythm creates an environment that
-          helps unleash your child’s genius.
-        </li>
-        <li>
-          <strong>Parent Participation:</strong> Parents actively participating alongside their children helps activate their
-          potential abilities.
-        </li>
-        <li>
-          <strong>Expert Insights:</strong> Teachers share valuable insights on various aspects of raising a child.
-        </li>
-        <li>
-          <strong>Collaborative Growth:</strong> The program fosters a happy environment for both parents and children to
-          grow together.
-        </li>
-        <li>
-          <strong>Individual Follow-ups:</strong> Regular one-on-one follow-ups ensure substantial individual attention.
-        </li>
-      </ul>
+          <ul class="list-disc ml-5">
+            <li>
+              <strong>Enhancing Brain Capacity:</strong> Focus on enlarging the brain capacity of children.
+            </li>
+            <li>
+              <strong>Personalized Guidance:</strong> With two teachers in the class, lessons are fast-paced and provide
+              personal guidance.
+            </li>
+            <li>
+              <strong>Engaging Environment:</strong> Effective use of lighting, sound, and rhythm creates an environment
+              that helps unleash your child’s genius.
+            </li>
+            <li>
+              <strong>Parent Participation:</strong> Parents actively participating alongside their children helps activate
+              their potential abilities.
+            </li>
+            <li>
+              <strong>Expert Insights:</strong> Teachers share valuable insights on various aspects of raising a child.
+            </li>
+            <li>
+              <strong>Collaborative Growth:</strong> The program fosters a happy environment for both parents and children
+              to grow together.
+            </li>
+            <li>
+              <strong>Individual Follow-ups:</strong> Regular one-on-one follow-ups ensure substantial individual attention.
+            </li>
+          </ul>
+        </div>
+        <div class="md:w-1/3 xl:w-1/4">
+          <Img src={infanttoddler} alt="CEO" class:list={'rounded object-contain w-[400px] h-[400px]'} />
+        </div>
+      </div>
 
       <h1 class="font-bold mt-10 mb-5 text-blue-600">Heguru သင်ရိုး၏ အဓိကအားသာချက်များ</h1>
       ၁. ဦးနှောက်၏ လုပ်ဆောင်နိုင်စွမ်းကို မြှင့်တင်ပေးခြင်း <br /><br />
